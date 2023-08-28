@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html, body {
+	@apply scroll-smooth antialiased bg-gray-100 font-sans text-gray-800
+}
+
+.navLink {
+	@apply font-medium px-4 py-2 hover:bg-neutral-100 rounded-lg duration-300 block
+}
+
+.navLink.active {
+	@apply text-blue-green font-semibold
+}
+
+.heading {
+	@apply text-2xl sm:text-3xl uppercase font-black
+}
+
+.formInput {
+	@apply w-full bg-transparent border-2 border-gray-700 rounded-xl py-3 px-5 text-sm placeholder:text-gray-500 font-medium text-white focus:border-blue-green focus-visible:outline-0
+}
+
+.extm {
+	@apply  rounded-xl
+}
+
+.gallery-image {
+	@apply duration-300 p-2 cursor-pointer
+}
+
+.gallery-image.active {
+	@apply border border-blue-green
+}
+
+.innerOverlay {
+	@apply !bg-black/20
+}
+
+.input-form {
+	@apply w-full text-sm border border-gray-300 focus-visible:outline-none focus:border-blue-green focus:ring-blue-green focus:ring-offset-2 rounded-lg focus:ring-2 duration-300 py-2.5
+}
+
+.label {
+	@apply block capitalize mb-2 text-lg font-bold
+}
+
+.ck {
+	@apply !border-gray-300 !shadow-none
+}
+
+.ck-toolbar {
+	@apply !rounded-t-xl !py-2 !px-4
+}
+
+.ck-button {
+	@apply !rounded-md
+}
+
+.ck-content {
+	@apply min-h-[200px] !rounded-b-xl !px-4
+}
+
+h2 {
+	@apply text-3xl md:text-4xl
+}
+
+h3 {
+	@apply text-2xl md:text-3xl
+}
+
+h4 {
+	@apply text-xl md:text-2xl
+}
+
+.ck-content a {
+	@apply font-medium text-blue-600 hover:underline
+}
+
+.ck-content ol {
+	@apply list-decimal list-inside
+}
+
+.ck-content ul {
+	@apply list-inside list-disc
+}
+
+.error-msg {
+	@apply text-sm text-red-600 font-medium block mt-1
+}
+
+table {
+	@apply w-full border-collapse
+}
+
+table thead tr th {
+	@apply px-6 py-3 text-left text-sm font-bold text-gray-700 uppercase
+}
+
+table tbody td {
+	@apply px-6 py-3 font-semibold text-sm
+}
+
+.checkbox {
+	@apply text-blue-green border border-gray-300 w-5 h-5 rounded focus:ring-blue-green duration-300
+}
+
+[data-hs-overlay-backdrop-template] {
+	@apply z-[199]
+}
+
+input[type="file"] {
+	@apply file:border-gray-200 file:py-1 file:px-3 file:text-sm file:shadow-none file:border-none file:ml-4 file:bg-gray-200 file:rounded-md file:font-semibold file:mr-4
+}
+
+input[type='number']::-webkit-inner-spin-button, 
+input[type='number']::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  @apply w-2 h-2
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply hidden
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-full
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500
+}

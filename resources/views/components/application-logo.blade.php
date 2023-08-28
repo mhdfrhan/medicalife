@@ -1,0 +1,1 @@
+<img src="{{ asset('img/logo.svg') }}" {{ $attributes }} alt="{{ config('app.name', 'Laravel') }}">
