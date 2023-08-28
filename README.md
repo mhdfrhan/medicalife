@@ -31,14 +31,14 @@ Medicalife is a comprehensive platform that aims to provide valuable health info
 
 ### Frontend:
 
--- Tailwind CSS
--- jQuery 
--- Preline UI
+- Tailwind CSS
+- jQuery 
+- Preline UI
 
 ### Backend:
 
--- Laravel
--- Livewire
+- Laravel
+- Livewire
 
 ## Getting Started
 
@@ -46,10 +46,10 @@ Follow these instructions to set up the Medicalife website locally on your devel
 
 ### Prerequisites
 
--- PHP 8.1 or later
--- Composer
--- Node.js and npm
--- MySQL or another supported database
+- PHP 8.1 or later
+- Composer
+- Node.js and npm
+- MySQL or another supported database
 
 ### Installation
 
