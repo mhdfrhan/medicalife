@@ -32,6 +32,7 @@ Route::middleware('auth')->group(function () {
 	// khusus admin
 	Route::middleware('admin')->group(function () {
 		Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+		Route::get('/dashboard/messages', 'DashboardController@message')->name('message');
 
 		// products
 		Route::get('/dashboard/e-commerce/semua-produk', 'DashboardController@allProducts')->name('dashboard.products');

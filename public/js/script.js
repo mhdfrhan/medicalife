@@ -1,3 +1,5 @@
+
+
 $(document).ready(function () {
 	var $zoomImage = $("#zoom");
 	var $galleryImages = $(".gallery-image");
@@ -63,4 +65,5 @@ $(document).ready(function () {
 		$(this).hide();
 		$('#showMore').show();
 	});
+	
 });

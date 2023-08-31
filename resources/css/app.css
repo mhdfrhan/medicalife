@@ -20,7 +20,7 @@ html, body {
 }
 
 .formInput {
-	@apply w-full bg-transparent border-2 border-gray-700 rounded-xl py-3 px-5 text-sm placeholder:text-gray-500 font-medium text-white focus:border-blue-green focus-visible:outline-0
+	@apply w-full bg-transparent border-2 border-gray-700 rounded-xl py-3 px-5 text-sm placeholder:text-gray-500 font-medium text-white focus:border-blue-green focus:outline-0 focus:ring-0 duration-300
 }
 
 .extm {

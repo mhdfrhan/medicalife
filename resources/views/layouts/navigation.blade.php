@@ -47,7 +47,7 @@
 </div>
 
 <div id="docs-sidebar"
-    class="hs-overlay hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform hidden fixed top-0 left-0 bottom-0 z-[250] lg:z-[150] w-72 bg-gray-800 shadow-lg shadow-gray-800/30 pt-7 pb-10 scrollbar-y lg:block lg:translate-x-0 lg:right-auto lg:bottom-0 rounded-r-3xl my-6">
+    class="hs-overlay hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-500 transform hidden fixed top-0 left-0 bottom-0 z-[250] lg:z-[150] w-72 bg-gray-800 shadow-lg shadow-gray-800/30 pt-7 pb-10 scrollbar-y lg:block lg:translate-x-0 lg:right-auto lg:bottom-0 rounded-r-3xl my-6">
     <div class="p-6 w-full">
         <a href="{{ route('home') }}" wire:navigate>
             <img src="{{ asset('img/logo-inline.svg') }}" class="h-10" alt="{{ config('app.name', 'Laravel') }} Logo">
@@ -71,7 +71,7 @@
                         Dashboard
                     </a>
                 </li>
-
+								
                 <li class="hs-accordion {{ request()->is('dashboard/e-commerce*') ? 'active' : '' }}"
                     id="nav-ecommerce">
                     <a class="hs-accordion-toggle flex items-center gap-x-3.5 py-2 px-3 hs-accordion-active:text-blue-green text-sm text-gray-300 rounded-lg  {{ request()->is('dashboard/e-commerce*') ? 'bg-gray-700' : 'hover:bg-gray-700' }} font-semibold duration-300"
@@ -117,6 +117,16 @@
                         </ul>
                     </div>
                 </li>
+
+								<li>
+									<a class="flex items-center gap-x-3.5 py-2 px-2.5 pl-8 {{ request()->routeIs('message') ? 'bg-gray-700' : '' }} text-sm text-gray-300 rounded-lg hover:bg-gray-700 font-semibold {{ request()->routeIs('message') ? 'text-blue-green' : '' }}"
+											href="{{ route('message') }}" wire:navigate>
+											<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[18px] h-[18px]">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+											</svg>											
+											Messages
+									</a>
+							</li>
 
                 <div class="!mt-8">
                     <p class="text-gray-400 text-sm font-semibold	">Settings</p>
@@ -197,10 +207,11 @@
             </ul>
         </div>
         <div class="text-gray-300 pb-10 mb-4">
-					<div class="p-5 bg-blue-green rounded-2xl">
-						<h6 class="text-white font-bold text-xl">Dibuat dan dikembangkan oleh Medicalife</h6>
-					</div>
-            <div class="hs-dropdown relative w-full [--placement:right-top] [--trigger:hover] border-t border-gray-700 mt-5">
+            <div class="p-5 bg-blue-green rounded-2xl">
+                <h6 class="text-white font-bold text-xl">Dibuat dan dikembangkan oleh Medicalife</h6>
+            </div>
+            <div
+                class="hs-dropdown relative w-full [--placement:right-top] [--trigger:hover] border-t border-gray-700 mt-5">
                 <button id="profileDropUp" type="button"
                     class="hs-dropdown-toggle w-full flex items-center gap-4 mt-4 justify-between cursor-pointer hover:bg-gray-700 duration-300 px-2 py-2 rounded-lg">
                     <div class="inline-flex items-center gap-3">

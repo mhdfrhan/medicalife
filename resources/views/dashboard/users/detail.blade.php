@@ -19,7 +19,7 @@
 
     <div class="mt-14">
         <div class="flex flex-wrap -mx-5">
-            <div class="w-full lg:w-2/3 p-5">
+            <div class="w-full xl:w-2/3 p-5">
                 <div class="bg-white p-5 shadow-lg shadow-gray-200/40 rounded-2xl">
                     <div class="sm:flex items-center gap-5 border-b mb-8 pb-8 border-dashed border-gray-300">
                         @if ($user->image)
@@ -56,7 +56,7 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full lg:w-1/3 p-5">
+            <div class="w-full xl:w-1/3 p-5">
                 <div class="bg-white p-5 shadow-lg shadow-gray-200/40 rounded-2xl">
                     <h5 class="text-2xl font-bold border-b border-dashed border-gray-300 mb-3 pb-3">Default Address</h5>
                     <div

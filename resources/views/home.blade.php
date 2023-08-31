@@ -306,27 +306,7 @@
                             kami.
                         </p>
                         <div class="mt-8">
-                            <form>
-                                <div class="mb-4">
-                                    <input type="text" class="formInput" autocomplete="off"
-                                        placeholder="Your name">
-                                </div>
-                                <div class="mb-4">
-                                    <input type="email" class="formInput" autocomplete="off" placeholder="Email">
-                                </div>
-                                <div class="mb-4">
-                                    <input type="text" class="formInput" autocomplete="off"
-                                        placeholder="Subject">
-                                </div>
-                                <div class="mb-4">
-                                    <textarea cols="30" rows="7" class="formInput" placeholder="Message..."></textarea>
-                                </div>
-                                <div class="mt-6">
-                                    <button type="submit"
-                                        class="py-5 px-4 text-center text-sm bg-blue-green rounded-xl text-white w-full font-semibold hover:bg-white hover:text-blue-green duration-300">Send
-                                        Message</button>
-                                </div>
-                            </form>
+                            @livewire('contact.send')
                         </div>
                     </div>
                 </div>

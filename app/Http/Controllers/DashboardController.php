@@ -140,4 +140,11 @@ class DashboardController extends Controller
 			'title' => 'Tambah Admin'
 		]);
 	}
+
+	public function message()
+	{
+		return view('dashboard.messages.index', [
+			'title' => 'Pesan Masuk'
+		]);
+	}
 }
