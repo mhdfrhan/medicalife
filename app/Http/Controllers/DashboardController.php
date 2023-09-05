@@ -147,4 +147,26 @@ class DashboardController extends Controller
 			'title' => 'Pesan Masuk'
 		]);
 	}
+
+	public function article()
+	{
+		return view('dashboard.article.index', [
+			'title' => 'Artikel'
+		]);
+	}
+
+	public function addArticle()
+	{
+		return view('dashboard.article.add', [
+			'title' => 'Tambah Artikel'
+		]);
+	}
+
+	public function editArticle($slug)
+	{
+		return view('dashboard.article.edit', [
+			'title' => 'Edit Artikel',
+			'slug' => $slug
+		]);
+	}
 }

@@ -7,17 +7,20 @@
             <option value="terlaris">Terlaris</option>
         </select>
     </div>
+    @empty($products->count())
+        <div class="text-center text-sm text-neutral-500">Belum ada produk saat ini.</div>
+    @endempty
     <div class="flex flex-wrap -mx-4">
         @foreach ($products as $i => $product)
             <div class="w-full sm:w-1/2 md:w-1/3 p-4">
-                <div class="bg-white rounded-2xl p-4 group">
+                <div class="bg-white rounded-3xl p-5 group">
                     <div class="relative overflow-hidden rounded-xl">
                         <a href="{{ route('detail.product', $product->slug) }}" wire:navigate>
                             <img src="{{ asset('img/products/' . $product->images->first()->image) }}"
                                 class="rounded-xl mx-auto bg-gray-200" alt="{{ $product->judul }}">
                         </a>
                         <button
-                            class="w-10 h-10 flex items-center justify-center rounded-xl bg-blue-green text-white absolute top-2 -right-20 group-hover:right-2 duration-500 transition-all ease-in-out hover:bg-white hover:text-blue-green shadow-lg shadow-blue-green/20"
+                            class="w-10 h-10 flex items-center justify-center rounded-xl bg-blue-500 text-white absolute top-2 -right-20 group-hover:right-2 duration-500 transition-all ease-in-out hover:bg-white hover:text-blue-500 shadow-lg shadow-blue-500/20"
                             wire:click='addToCart({{ $product->id }})'>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -33,7 +36,7 @@
                                 {{ $product->judul }}
                             </h5>
                         </a>
-                        <span class="block mt-1 text-blue-green font-semibold">Rp.
+                        <span class="block mt-1 text-blue-500 font-bold">Rp.
                             {{ number_format($product->harga_diskon) }}
                         </span>
                     </div>

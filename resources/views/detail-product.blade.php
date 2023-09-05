@@ -13,7 +13,7 @@
                 <div class="w-full sm:w-1/2 lg:w-1/3 p-4 pb-3 sm:pb-4">
                     <div
                         class="p-5 rounded-2xl bg-white flex items-center gap-x-5 shadow-lg shadow-gray-200/40 hover:scale-105 duration-300">
-                        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-green p-2">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-500 p-2">
                             <img src="{{ asset('img/icons/fast.svg') }}" class="h-8" alt="">
                         </div>
                         <h6 class="text-xl font-semibold">Fast Delivery</h6>
@@ -22,7 +22,7 @@
                 <div class="w-full sm:w-1/2 lg:w-1/3 p-4 pb-3 sm:pb-4">
                     <div
                         class="p-5 rounded-2xl bg-white flex items-center gap-x-5 shadow-lg shadow-gray-200/40 hover:scale-105 duration-300">
-                        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-green p-3">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-500 p-3">
                             <img src="{{ asset('img/icons/quality.svg') }}" class="h-8" alt="">
                         </div>
                         <h6 class="text-xl font-semibold">High Quality</h6>
@@ -31,7 +31,7 @@
                 <div class="w-full sm:w-1/2 lg:w-1/3 p-4 pb-3 sm:pb-4">
                     <div
                         class="p-5 rounded-2xl bg-white flex items-center gap-x-5 shadow-lg shadow-gray-200/40 hover:scale-105 duration-300">
-                        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-green p-3">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-500 p-3">
                             <img src="{{ asset('img/icons/return.svg') }}" class="h-8" alt="">
                         </div>
                         <h6 class="text-xl font-semibold">7 Days of Return</h6>
@@ -45,17 +45,17 @@
         <div class="max-w-6xl mx-auto">
             <nav class="relative z-0 flex overflow-hidden rounded-xl bg-white" aria-label="Tabs" role="tablist">
                 <button type="button"
-                    class="hs-tab-active:bg-blue-green rounded-xl hs-tab-active:text-white relative min-w-0 flex-1 bg-white py-4 px-4 text-gray-500 hover:text-gray-700 text-sm font-medium text-center overflow-hidden hover:bg-gray-50 focus:z-10 active"
+                    class="hs-tab-active:bg-blue-500 rounded-xl hs-tab-active:text-white relative min-w-0 flex-1 bg-white py-4 px-4 text-gray-500 hover:text-gray-700 text-sm font-medium text-center overflow-hidden hover:bg-gray-50 focus:z-10 active"
                     id="description-item" data-hs-tab="#description" aria-controls="description" role="tab">
                     Deskripsi
                 </button>
                 <button type="button"
-                    class="hs-tab-active:bg-blue-green rounded-xl hs-tab-active:text-white relative min-w-0 flex-1 bg-white py-4 px-4 text-gray-500 hover:text-gray-700 text-sm font-medium text-center overflow-hidden hover:bg-gray-50 focus:z-10"
+                    class="hs-tab-active:bg-blue-500 rounded-xl hs-tab-active:text-white relative min-w-0 flex-1 bg-white py-4 px-4 text-gray-500 hover:text-gray-700 text-sm font-medium text-center overflow-hidden hover:bg-gray-50 focus:z-10"
                     id="reviews-item" data-hs-tab="#reviews" aria-controls="reviews" role="tab">
                     Penilaian
                 </button>
                 <button type="button"
-                    class="hs-tab-active:bg-blue-green rounded-xl hs-tab-active:text-white relative min-w-0 flex-1 bg-white py-4 px-4 text-gray-500 hover:text-gray-700 text-sm font-medium text-center overflow-hidden hover:bg-gray-50 focus:z-10"
+                    class="hs-tab-active:bg-blue-500 rounded-xl hs-tab-active:text-white relative min-w-0 flex-1 bg-white py-4 px-4 text-gray-500 hover:text-gray-700 text-sm font-medium text-center overflow-hidden hover:bg-gray-50 focus:z-10"
                     id="shipping-item" data-hs-tab="#shipping" aria-controls="shipping" role="tab">
                     Pengiriman
                 </button>
@@ -121,7 +121,7 @@
                 <div id="shipping" class="hidden" role="tabpanel" aria-labelledby="shipping-item">
                     <p class="text-gray-500">
                         Produk ini dikirim melalu metode <span
-                            class="font-bold text-blue-green">{{ $detail->pengiriman }}</span>
+                            class="font-bold text-blue-500">{{ $detail->pengiriman }}</span>
                     </p>
                 </div>
             </div>
@@ -130,7 +130,7 @@
     </section>
 
     <section class="pt-8 lg:pt-16 px-5">
-        <div class="max-w-6xl mx-auto bg-blue-green px-4 py-10 rounded-3xl">
+        <div class="max-w-6xl mx-auto bg-blue-500 px-4 py-10 rounded-3xl">
             <div class="max-w-2xl mx-auto text-center">
                 <h2 class="text-xl sm:text-2xl font-semibold text-white !leading-relaxed">
                     Produk yang dijual di Medicalife sudah terbukti 100% aman, dan juga berkualitas terbaik, serta

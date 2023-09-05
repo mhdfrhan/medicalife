@@ -34,7 +34,7 @@ $(document).ready(function () {
 		});
 	}
 
-	// Menambahkan kelas "active" ke galeri pertama saat halaman dimuat
+	
 	$galleryImages.first().addClass("active");
 	updateZoomImage($galleryImages.first().attr("src"));
 

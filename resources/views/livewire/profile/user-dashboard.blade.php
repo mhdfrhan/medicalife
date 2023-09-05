@@ -3,7 +3,7 @@
     <div class="flex flex-wrap -mx-5">
         @livewire('profile.menu')
         <div class="w-full lg:w-[70%] p-5">
-            <h5 class="label !text-xl">My Account</h5>
+            <h5 class="label !text-xl">Akun Saya</h5>
             <div class="p-5 bg-white rounded-2xl">
                 @if (!Auth::user()->alamat && !Auth::user()->no_telepon)
                     <div
@@ -14,7 +14,7 @@
                 <div>
                     <form wire:submit='updateData'>
                         <div class="mb-6 last-of-type:mb-0">
-                            <label for="image" class="label">Image</label>
+                            <label for="image" class="label">Gambar</label>
                             <input type="file" id="image" class="input-form" wire:model.blur='image'
                                 autocomplete="off">
 																<small>Foto harus maksimal 2mb dan harus Square Portrait</small>
@@ -23,7 +23,7 @@
                             @enderror
                         </div>
                         <div class="mb-6 last-of-type:mb-0">
-                            <label for="name" class="label">Full Name</label>
+                            <label for="name" class="label">Nama Lengkap</label>
                             <input type="text" id="name" class="input-form" wire:model.blur='name'
                                 autocomplete="off">
                             @error('name')
@@ -39,7 +39,7 @@
                             @enderror
                         </div>
                         <div class="mb-6 last-of-type:mb-0">
-                            <label for="phone" class="label">Phone Number</label>
+                            <label for="phone" class="label">Nomor HP</label>
                             <input type="number" id="phone" class="input-form" wire:model.blur='phone'
                                 autocomplete="off"">
                             @error('phone')
@@ -47,7 +47,7 @@
                             @enderror
                         </div>
                         <div class="mb-6 last-of-type:mb-0">
-                            <label for="address" class="label">Address</label>
+                            <label for="address" class="label">Alamat</label>
                             <textarea id="address" cols="30" rows="6" class="input-form" wire:model.blur='address'></textarea>
                             <small>Lengkap dengan nama provinsi, kota/kabupaten, kelurahan, kecamatan</small>
                             @error('address')
@@ -56,8 +56,7 @@
                         </div>
                         <div class="mt-8">
                             <button
-                                class="py-3 px-4 text-center font-bold bg-blue-green rounded-xl w-full text-white active:scale-95 duration-300">Update
-                                My Account</button>
+                                class="py-3 px-4 text-center font-bold bg-blue-500 rounded-xl w-full text-white active:scale-95 duration-300">Perbarui Akun Saya</button>
                             <small class="mt-3 text-gray-500 text-center block">Kami sangat menjaga privasi dan keamanan
                                 data Anda. Keamanan data Anda adalah prioritas utama bagi kami.</small>
                         </div>

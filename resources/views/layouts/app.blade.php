@@ -9,9 +9,7 @@
     <title>{{ config('app.name', 'Laravel') . ' | ' . $title }}</title>
 
     <!-- Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -31,7 +29,7 @@
     </div>
 
     <footer
-        class="w-full px-4 sm:px-6 md:px-8 lg:pl-80 mt-14 pb-14 flex flex-wrap gap-4 justify-center items-center sm:justify-between text-gray-400 text-sm 2xl:text-base">
+        class="w-full px-4 sm:px-6 md:px-8 lg:pl-80 mt-14 pb-14 flex flex-wrap gap-4 justify-center items-center sm:justify-between text-gray-400 text-sm">
         <p>© Copyright {{ date('Y') }}. All Rights Reserved.</p>
         <p>Made by <a href="https://inifarhan.my.id" class="text-red-500 font-bold hover:underline"
                 target="_blank">Farhan</a></p>

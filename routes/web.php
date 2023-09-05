@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', "HomeController@index")->name('home');
 Route::get('/product/{slug}', 'HomeController@detailProduct')->name('detail.product');
 Route::get('/products', 'HomeController@allProducts')->name('all.products');
+Route::get('/articles', 'ArticleController@index')->name('articles');
+Route::get('/article/{slug}', 'ArticleController@show')->name('article.show');
 
 
 Route::middleware('auth')->group(function () {
@@ -40,6 +42,11 @@ Route::middleware('auth')->group(function () {
 		Route::get('/dashboard/e-commerce/{slug}/edit', 'DashboardController@editProducts')->name('edit.products');
 		Route::get('/dashboard/e-commerce/orders', 'DashboardController@order')->name('dashboard.orders');
 		Route::get('/dashboard/e-commerce/detail-order/{invoice}', 'DashboardController@detailOrder')->name('detail.order');
+
+		// article
+		Route::get('/dashboard/article/all', 'DashboardController@article')->name('dashboard.article');
+		Route::get('/dashboard/article/add', 'DashboardController@addArticle')->name('tambah.article');
+		Route::get('/dashboard/article/{slug}/edit', 'DashboardController@editArticle')->name('edit.article');
 
 		// users
 		Route::get('/dashboard/users/semua-user', 'DashboardController@allUsers')->name('all.users');

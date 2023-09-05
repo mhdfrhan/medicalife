@@ -3,7 +3,7 @@
     <div class="flex flex-wrap -mx-5">
         @livewire('profile.menu')
         <div class="w-full lg:w-[70%] p-5">
-            <h5 class="label !text-xl">Your Review</h5>
+            <h5 class="label !text-xl">Ulasan Anda</h5>
             <div class="p-5 bg-white rounded-2xl">
                 @empty($review->count())
                     <div class="text-center text-sm text-gray-400">Belum ada ulasan apapun dari Anda</div>
@@ -16,7 +16,7 @@
                                         <img src="{{ asset('img/products/' . $r->product->images->first()->image) }}"
                                             class="w-16 rounded-lg object-cover shrink-0 h-16" alt="">
                                         <div>
-                                            <div class="label !m-0 hover:text-blue-green duration-300">
+                                            <div class="label !m-0 hover:text-blue-500 duration-300">
                                                 <a href="{{ route('user.review', strtolower($r->invoice)) }}" wire:navigate>
                                                     {{ $r->product->judul }}
                                                 </a>

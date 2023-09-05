@@ -13,7 +13,7 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Nunito Sans', ...defaultTheme.fontFamily.sans],
+				sans: ['Plus Jakarta Sans', ...defaultTheme.fontFamily.sans],
 			},
 			colors: {
 				'blue-green': '#03989E'

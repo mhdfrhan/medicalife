@@ -35,12 +35,12 @@
             </div>
             <div class="mt-6">
                 <button {{ $email === null || $password === null ? 'disabled' : '' }}
-                    class="w-full py-3 px-4 text-center text-white bg-blue-green rounded-xl font-bold duration-300 {{ $email === null || $password === null ? 'bg-opacity-60 cursor-not-allowed' : 'active:scale-95' }}">Sign
+                    class="w-full py-3 px-4 text-center text-white bg-blue-500 rounded-xl font-bold duration-300 {{ $email === null || $password === null ? 'bg-opacity-60 cursor-not-allowed' : 'active:scale-95' }}">Sign
                     Up</button>
             </div>
             <div class="mt-4 text-sm text-gray-500 text-center">
 							Already have an acoount? <a href="{{ route('login') }}" wire:navigate
-                    class="text-blue-green font-bold hover:underline">Sign In</a>
+                    class="text-blue-500 font-bold hover:underline">Sign In</a>
             </div>
         </form>
     </div>

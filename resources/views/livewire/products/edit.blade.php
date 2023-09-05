@@ -35,15 +35,15 @@
 <div>
     <div class="flex items-center justify-between">
         <div>
-            <h1 class="heading !capitalize !font-extrabold">Edit Produk</h1>
+            <h1 class="heading !capitalize !font-bold">Edit Produk</h1>
             <p class="text-gray-500 mt-2">Silahkan edit produk Anda dibawah ini.</p>
         </div>
         <div class="mt-8 flex items-center gap-3">
             <button wire:click='draft'
-                class="py-2.5 px-4 text-center border-gray-300 hover:bg-gray-200 hover:border-gray-200 border text-sm text-blue-green rounded-lg font-semibold duration-300">Update
+                class="py-2.5 px-4 text-center border-gray-300 hover:bg-gray-200 hover:border-gray-200 border text-sm text-blue-500 rounded-lg font-semibold duration-300">Update
                 ke Draft</button>
             <button wire:click='update'
-                class="py-2.5 px-4 text-center bg-blue-green text-sm text-white rounded-lg font-semibold hover:opacity-80 duration-300">Publish
+                class="py-2.5 px-4 text-center bg-blue-500 text-sm text-white rounded-lg font-semibold hover:opacity-80 duration-300">Publish
                 Product</button>
         </div>
     </div>
@@ -56,7 +56,7 @@
                         <div class="relative">
                             <img src="{{ asset('img/products/' . $img->image) }}"
                                 class="w-24 h-24 object-cover rounded-lg">
-                            <div class="absolute -top-2 -right-2 w-6 h-6 flex items-center justify-center rounded-full bg-gray-300 hover:bg-blue-green group shadow-lg cursor-pointer duration-300"
+                            <div class="absolute -top-2 -right-2 w-6 h-6 flex items-center justify-center rounded-full bg-gray-300 hover:bg-blue-500 group shadow-lg cursor-pointer duration-300"
                                 wire:click="deleteOldImage({{ $img->id }})">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor"
@@ -70,7 +70,7 @@
                         @if ($images[$i] ?? false)
                             <div class="relative">
                                 <img src="{{ $images[$i]->temporaryUrl() }}" class="w-24 h-24 object-cover rounded-lg">
-                                <div class="absolute -top-2 -right-2 w-6 h-6 flex items-center justify-center rounded-full bg-gray-300 hover:bg-blue-green group shadow-lg cursor-pointer duration-300"
+                                <div class="absolute -top-2 -right-2 w-6 h-6 flex items-center justify-center rounded-full bg-gray-300 hover:bg-blue-500 group shadow-lg cursor-pointer duration-300"
                                     wire:click="deleteImage({{ $i }})">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor"
@@ -83,7 +83,7 @@
                             @if ($displayedImages <= (10 - $totalImages))
                                 <div class="relative">
                                     <label for="image-{{ $i + 1 }}"
-                                        class="w-24 h-24 flex items-center justify-center border-2 rounded-lg text-blue-green border-dashed text-center p-1 "
+                                        class="w-24 h-24 flex items-center justify-center border-2 rounded-lg text-blue-500 border-dashed text-center p-1 "
                                         wire:loading.class='opacity-60' wire:target='images'>
                                         <div>
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"

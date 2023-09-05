@@ -25,7 +25,7 @@
                         <div class="mt-2 flex flex-wrap items-center gap-4">
                             <div>
                                 <label for="image"
-                                    class="text-blue-green hover:underline font-semibold cursor-pointer">Pilih
+                                    class="text-blue-500 hover:underline font-semibold cursor-pointer">Pilih
                                     gambar</label>
                                 <input type="file" class="hidden" id="image" wire:model='image'>
                             </div>
@@ -69,7 +69,7 @@
                 </div>
                 <div class="mt-6">
                     <button {{ $name === null || $email === null ? 'disabled' : '' }}
-                        class="py-3 px-4 text-center text-white bg-blue-green rounded-lg w-full font-semibold duration-300 {{ $name === null || $email === null ? 'cursor-not-allowed bg-opacity-60' : 'active:scale-95' }}">Update
+                        class="py-3 px-4 text-center text-white bg-blue-500 rounded-lg w-full font-semibold duration-300 {{ $name === null || $email === null ? 'cursor-not-allowed bg-opacity-60' : 'active:scale-95' }}">Update
                         user</button>
                 </div>
             </form>

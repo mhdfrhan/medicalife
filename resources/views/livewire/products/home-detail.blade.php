@@ -48,11 +48,11 @@
                 @endif
                 <div class="flex items-center gap-3 justify-end text-sm my-4">
                     <span>Availablity</span>
-                    <div class="py-1 px-4 bg-blue-green text-white rounded-full">
+                    <div class="py-1 px-4 bg-blue-500 text-white rounded-full">
                         {{ $detail->stok > 0 ? 'In Stock' : 'Out of stock' }}
                     </div>
                 </div>
-                <h6 class="text-blue-green font-bold text-3xl">
+                <h6 class="text-blue-500 font-bold text-3xl">
                     Rp. {{ number_format($detail->harga_diskon) }}
                     <span class="text-sm text-gray-400 font-medium line-through">
                         Rp. {{ number_format($detail->harga_asli) }}
@@ -80,7 +80,7 @@
                     <div class="flex items-center gap-x-3">
                         <div class="flex items-stretch">
                             <button wire:click='decrement'
-                                class="w-9 h-9 flex items-center text-gray-500 justify-center border rounded-l-lg border-r-0 border-gray-300 hover:bg-blue-green duration-300 hover:text-white hover:border-blue-green">
+                                class="w-9 h-9 flex items-center text-gray-500 justify-center border rounded-l-lg border-r-0 border-gray-300 hover:bg-blue-500 duration-300 hover:text-white hover:border-blue-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="w-5 h-5 ">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
@@ -90,7 +90,7 @@
                                 class="w-12 h-9 border border-gray-300 focus:outline-none text-center text-sm"
                                 min="1">
                             <button wire:click='increment'
-                                class="w-9 h-9 flex items-center text-gray-500 justify-center border border-l-0 rounded-r-lg border-gray-300 hover:bg-blue-green duration-300 hover:text-white hover:border-blue-green">
+                                class="w-9 h-9 flex items-center text-gray-500 justify-center border border-l-0 rounded-r-lg border-gray-300 hover:bg-blue-500 duration-300 hover:text-white hover:border-blue-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
@@ -102,7 +102,7 @@
                 </div>
                 <div class="mt-14 flex items-center justify-end gap-x-4">
                     <button wire:click='addToCart({{ $detail->id }})'
-                        class="flex items-center gap-x-3 border py-3 px-6 border-blue-green  text-blue-green rounded-lg hover:bg-blue-green/10 duration-300">
+                        class="flex items-center gap-x-3 border py-3 px-6 border-blue-500  text-blue-500 rounded-lg hover:bg-blue-500/10 duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -111,7 +111,7 @@
                         <span>Masukkan ke keranjang</span>
                     </button>
                     <button wire:click='buyNow({{ $detail->id }})'
-                        class="border py-3 px-6 border-blue-green bg-blue-green text-white rounded-lg hover:opacity-80 duration-300">
+                        class="border py-3 px-6 border-blue-500 bg-blue-500 text-white rounded-lg hover:opacity-80 duration-300">
                         <span>Beli Sekarang</span>
                     </button>
                 </div>

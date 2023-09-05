@@ -1,7 +1,7 @@
 <div>
 	@include('partials.message')
     <h1 class="text-2xl sm:text-3xl capitalize !font-extrabold">Orders <span
-            class="uppercase text-blue-green">#{{ $invoice }}</span></h1>
+            class="uppercase text-blue-500">#{{ $invoice }}</span></h1>
     <p class="mt-1 text-gray-500 font-semibold">Customer ID : {{ $userId }}</p>
 
     <div class="mt-14 flex flex-wrap -mx-5">
@@ -69,7 +69,7 @@
                                         </svg>
                                         <div class="text-sm space-y-2">
                                             <p class=" font-bold">Customer</p>
-                                            <p class="text-blue-green font-semibold">{{ $user->name }}</p>
+                                            <p class="text-blue-500 font-semibold">{{ $user->name }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -82,7 +82,7 @@
                                         </svg>
                                         <div class="text-sm space-y-2">
                                             <p class=" font-bold">Email</p>
-                                            <p class="text-blue-green font-semibold">{{ $user->email }}</p>
+                                            <p class="text-blue-500 font-semibold">{{ $user->email }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -95,7 +95,7 @@
                                         </svg>
                                         <div class="text-sm space-y-2">
                                             <p class=" font-bold">Phone</p>
-                                            <p class="text-blue-green font-semibold">{{ $user->no_telepon }}</p>
+                                            <p class="text-blue-500 font-semibold">{{ $user->no_telepon }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -108,7 +108,7 @@
                                         </svg>
                                         <div class="text-sm space-y-2">
                                             <p class=" font-bold">Address</p>
-                                            <p class="text-blue-green font-semibold">
+                                            <p class="text-blue-500 font-semibold">
                                                 {{ $user->alamat }}
                                             </p>
                                         </div>
@@ -130,7 +130,7 @@
                                         </svg>
                                         <div class="text-sm space-y-2">
                                             <p class=" font-bold">Email</p>
-                                            <p class="text-blue-green font-semibold">{{ $user->email }}</p>
+                                            <p class="text-blue-500 font-semibold">{{ $user->email }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -143,7 +143,7 @@
                                         </svg>
                                         <div class="text-sm space-y-2">
                                             <p class=" font-bold">Phone</p>
-                                            <p class="text-blue-green font-semibold">{{ $user->no_telepon }}</p>
+                                            <p class="text-blue-500 font-semibold">{{ $user->no_telepon }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -156,7 +156,7 @@
                                         </svg>
                                         <div class="text-sm space-y-2">
                                             <p class=" font-bold">Shipping Date</p>
-                                            <p class="text-blue-green font-semibold">
+                                            <p class="text-blue-500 font-semibold">
                                                 {{ $shippingDate->format('j M, Y') }}</p>
                                         </div>
                                     </div>
@@ -170,7 +170,7 @@
                                         </svg>
                                         <div class="text-sm space-y-2">
                                             <p class=" font-bold">Address</p>
-                                            <p class="text-blue-green font-semibold">
+                                            <p class="text-blue-500 font-semibold">
                                                 {{ $user->alamat }}
                                             </p>
                                         </div>
@@ -183,7 +183,7 @@
             </div>
         </div>
         <div class="w-full lg:w-[30%] px-5">
-            <div class="p-5 bg-blue-green rounded-3xl shadow-lg shadow-blue-green-200/40">
+            <div class="p-5 bg-blue-500 rounded-3xl shadow-lg shadow-blue-500/40">
                 <h5 class="text-[22px] text-white font-bold">Summary</h5>
                 <div class="mt-4 text-white border-b mb-4 pb-4 border-gray-200/40 capitalize">
                     <div class="flex items-center justify-between text-lg">
@@ -202,11 +202,11 @@
                     <p class="font-bold">Rp.{{ number_format($totalPrice) }}</p>
                 </div>
             </div>
-            <div class="p-5 bg-blue-green rounded-3xl shadow-lg shadow-blue-green-200/40 mt-4">
+            <div class="p-5 bg-blue-500 rounded-3xl shadow-lg shadow-blue-500/40 mt-4">
                 <h5 class="text-[22px] text-white font-bold">Order Status</h5>
                 <div class="mt-4">
                     <select wire:model='status' wire:change='updateStatus'
-                        class="w-full focus:outline-none focus:ring-0 border rounded-lg !bg-transparent !border-white/50 text-white text-sm">
+                        class="w-full focus:outline-none focus:ring-0 border rounded-lg !bg-transparent !border-white/50 text-white text-sm border-2">
                         <option class="text-gray-800" value="menunggu_konfirmasi">Menunggu Konfirmasi</option>
                         <option class="text-gray-800" value="dikemas">Dikemas</option>
                         <option class="text-gray-800" value="dikirim">Dikirim</option>

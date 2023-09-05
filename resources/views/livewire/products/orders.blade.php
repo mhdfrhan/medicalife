@@ -1,21 +1,21 @@
 <div>
     <div>
-        <h1 class="heading !capitalize !font-extrabold">Orders</h1>
+        <h1 class="heading !capitalize !font-bold">Orders</h1>
         <ul class="flex flex-wrap items-center gap-x-6 gap-y-3 mt-6">
             <li class="text-sm text-gray-500 font-bold">
                 Semua ({{ $semua->count() }})
             </li>
             <li class="text-sm text-gray-500 font-bold">
-                <span class="text-blue-green">Menunggu Konfirmasi</span> ({{ $menunggu->count() }})
+                <span class="text-blue-500">Menunggu Konfirmasi</span> ({{ $menunggu->count() }})
             </li>
             <li class="text-sm text-gray-500 font-bold">
-                <span class="text-blue-green">Dikemas</span> ({{ $dikemas->count() }})
+                <span class="text-blue-500">Dikemas</span> ({{ $dikemas->count() }})
             </li>
             <li class="text-sm text-gray-500 font-bold">
-                <span class="text-blue-green">Dikirim</span> ({{ $dikirim->count() }})
+                <span class="text-blue-500">Dikirim</span> ({{ $dikirim->count() }})
             </li>
             <li class="text-sm text-gray-500 font-bold">
-                <span class="text-blue-green">Selesai</span> ({{ $selesai->count() }})
+                <span class="text-blue-500">Selesai</span> ({{ $selesai->count() }})
             </li>
         </ul>
     </div>

@@ -10,7 +10,7 @@
             </ul>
         </div>
         <a href="{{ route('tambah.admin') }}" wire:navigate
-            class="py-2.5 px-4 text-center bg-blue-green text-sm text-white rounded-lg font-semibold hover:opacity-80 duration-300">
+            class="py-2.5 px-4 text-center bg-blue-500 text-sm text-white rounded-lg font-semibold hover:opacity-80 duration-300">
             Add Admin</a>
     </div>
 
@@ -64,7 +64,7 @@
 
                                         <td class="max-w-[250px]">
                                             <a href="{{ route('detail.user', encrypt($user->id)) }}" wire:navigate
-                                                class="line-clamp-3 font-semibold mb-0 text-blue-green hover:underline capitalize">
+                                                class="line-clamp-3 font-semibold mb-0 text-blue-500 hover:underline capitalize">
                                                 {{ $user->name }}
                                             </a>
                                         </td>

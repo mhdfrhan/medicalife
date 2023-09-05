@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Articles;
 use App\Models\Products;
 use App\Models\Reviews;
 use Illuminate\Http\Request;
@@ -10,9 +11,11 @@ class HomeController extends Controller
 {
 	public function index()
 	{
+		$articles = Articles::where('status', 1)->latest()->get();
 
 		return view('home', [
-			'title' => 'Home'
+			'title' => 'Home',
+			'articles' => $articles
 		]);
 	}
 
@@ -23,7 +26,7 @@ class HomeController extends Controller
 		if (!$detail) {
 			return redirect(route('home'));
 		}
-		
+
 		$reviews = Reviews::where('product_id', $detail->id)->get();
 
 		return view('detail-product', [

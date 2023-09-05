@@ -3,14 +3,14 @@
     <div class="flex flex-wrap -mx-5">
         @foreach ($products as $p)
             <div class="w-full sm:w-1/2 md:w-1/3 p-4">
-                <div class="bg-white rounded-2xl p-4 group">
+                <div class="bg-white rounded-3xl p-5 group">
                     <div class="relative overflow-hidden rounded-xl ">
                         <a href="{{ route('detail.product', $p->slug) }}" wire:navigate>
                             <img src="{{ asset('img/products/' . $p->images->first()->image) }}"
                                 class="rounded-xl mx-auto bg-gray-200" alt="">
                         </a>
                         <button
-                            class="w-10 h-10 flex items-center justify-center rounded-xl bg-blue-green text-white absolute top-2 -right-20 group-hover:right-2 duration-500 transition-all ease-in-out hover:bg-white hover:text-blue-green shadow-lg shadow-blue-green/20"
+                            class="w-10 h-10 flex items-center justify-center rounded-xl bg-blue-500 text-white absolute top-2 -right-20 group-hover:right-2 duration-500 transition-all ease-in-out hover:bg-white hover:text-blue-500 shadow-lg shadow-blue-500/20"
                             wire:click='addToCart({{ $p->id }})'>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -26,7 +26,7 @@
                                 {{ $p->judul }}
                             </h5>
                         </a>
-                        <span class="block mt-1 text-blue-green font-semibold">Rp. {{ number_format($p->harga_diskon) }}
+                        <span class="block mt-1 text-blue-500 font-bold">Rp. {{ number_format($p->harga_diskon) }}
                         </span>
                     </div>
                 </div>

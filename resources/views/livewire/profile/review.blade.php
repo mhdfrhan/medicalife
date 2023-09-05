@@ -23,7 +23,7 @@
                         <div class="w-full lg:w-[30%] px-4 text-right">
                             <div class="flex flex-col h-full">
                                 <div>
-                                    <span class="text-sm capitalize text-blue-green font-bold">
+                                    <span class="text-sm capitalize text-blue-500 font-bold">
                                         {{ ucwords(str_replace('_', ' ', $sales->status)) }}
                                     </span>
                                     <span
@@ -82,8 +82,7 @@
                         @enderror
                     </div>
                     <button wire:click='submitReview'
-                        class="w-full mt-6 py-3 bg-blue-green text-white rounded-lg font-semibold text-sm active:scale-95 duration-300">Submit
-                        Review</button>
+                        class="w-full mt-6 py-3 bg-blue-500 text-white rounded-lg font-semibold text-sm active:scale-95 duration-300">Kirim Ulasan</button>
                 @endif
             </div>
         </div>

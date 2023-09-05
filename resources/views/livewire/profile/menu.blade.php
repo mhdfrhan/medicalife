@@ -16,7 +16,7 @@
                 </div>
             @else
                 <div
-                    class="w-20 h-20 bg-gray-200/60 rounded-full flex items-center justify-center text-2xl font-black text-blue-green shrink-0">
+                    class="w-20 h-20 bg-gray-200/60 rounded-full flex items-center justify-center text-2xl font-black text-blue-500 shrink-0">
                     @auth
                         @php
                             $nama = auth()->user()->name;
@@ -54,17 +54,15 @@
         <div class="hs-collapse overflow-hidden transition-[height] duration-300" id="collapse-1-heading" wire:ignore>
             <ul class="space-y-1.5 mt-5">
                 <li><a href="{{ route('user.dashboard') }}" wire:navigate
-                        class="block py-2 px-4 rounded-lg duration-300 select-none capitalize {{ request()->routeIs('user.dashboard') ? 'bg-gray-100 text-blue-green font-bold' : 'hover:bg-gray-100 font-semibold' }}">My
-                        Account</a></li>
+                        class="block py-2 px-4 rounded-lg duration-300 select-none capitalize {{ request()->routeIs('user.dashboard') ? 'bg-gray-100 text-blue-500 font-bold' : 'hover:bg-gray-100 font-semibold' }}">Akun Saya</a></li>
                 <li><a href="{{ route('user.transaction') }}" wire:navigate
-                        class="block py-2 px-4 rounded-lg duration-300 select-none capitalize {{ request()->routeIs('user.transaction') ? 'bg-gray-100 text-blue-green font-bold' : 'hover:bg-gray-100 font-semibold' }}">Transactions</a>
+                        class="block py-2 px-4 rounded-lg duration-300 select-none capitalize {{ request()->routeIs('user.transaction') ? 'bg-gray-100 text-blue-500 font-bold' : 'hover:bg-gray-100 font-semibold' }}">Transaksi</a>
                 </li>
                 <li><a href="{{ route('user.reviews') }}" wire:navigate
-                        class="block py-2 px-4 rounded-lg duration-300 select-none capitalize {{ request()->routeIs('user.reviews') ? 'bg-gray-100 text-blue-green font-bold' : 'hover:bg-gray-100 font-semibold' }}">Reviews</a>
+                        class="block py-2 px-4 rounded-lg duration-300 select-none capitalize {{ request()->routeIs('user.reviews') ? 'bg-gray-100 text-blue-500 font-bold' : 'hover:bg-gray-100 font-semibold' }}">Ulasan</a>
                 </li>
                 <li><a href="{{ route('user.security') }}" wire:navigate
-                        class="block py-2 px-4 rounded-lg duration-300 select-none capitalize {{ request()->routeIs('user.security') ? 'bg-gray-100 text-blue-green font-bold' : 'hover:bg-gray-100 font-semibold' }}">account
-                        security</a></li>
+                        class="block py-2 px-4 rounded-lg duration-300 select-none capitalize {{ request()->routeIs('user.security') ? 'bg-gray-100 text-blue-500 font-bold' : 'hover:bg-gray-100 font-semibold' }}">keamanan akun</a></li>
             </ul>
         </div>
     </div>

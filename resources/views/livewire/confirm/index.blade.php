@@ -11,8 +11,8 @@
         <div class="w-full lg:w-2/3 p-5">
             <div class="border-b pb-10 mb-10">
                 <div class="max-w-md">
-                    <h5 class="font-bold text-xl mb-6">Delivery</h5>
-                    <h6 class="capitalize font-bold">Shipping address</h6>
+                    <h5 class="font-bold text-xl mb-6">Pengiriman</h5>
+                    <h6 class="capitalize font-bold">Alamat pengiriman</h6>
                     <div class="mt-4">
                         <h6 class="font-semibold">{{ Auth::user()->name }}</h6>
                         <p class="text-sm to-gray-500 mt-1 2xl:text-base">
@@ -21,14 +21,14 @@
                     </div>
                 </div>
                 <div class="mt-6">
-                    <label for="pesan" class="label">Message</label>
+                    <label for="pesan" class="label">Pesan</label>
                     <textarea cols="30" rows="6" wire:model='message' class="input-form" placeholder="If you have a message, write it here..."></textarea>
                 </div>
             </div>
             <div>
-                <h5 class="font-bold text-xl mb-6">Order List</h5>
+                <h5 class="font-bold text-xl mb-6">List Pesanan</h5>
                 <div class="border py-4 px-5 rounded-xl rounded-b-none">
-                    <h6 class="capitalize font-bold">Sent from Medicalife</h6>
+                    <h6 class="capitalize font-bold">Dikirim oleh Medicalife</h6>
                 </div>
                 <div class="border py-4 px-5 border-t-0 rounded-xl rounded-t-none">
                     @if ($getProducts === null)
@@ -41,7 +41,7 @@
                                         <div>
                                             <h6 class="font-semibold capitalize">{{ $item->product->judul }}</h6>
                                             <p class="text-sm text-gray-500 my-1">{{ $item->quantity }}
-                                                {{ $item->quantity > 1 ? 'items' : 'item' }}</p>
+                                                {{ $item->quantity > 1 ? 'items' : 'produk' }}</p>
                                             <p class="text-sm font-bold tracking-wide">Rp.
                                                 {{ number_format($item->price) }}
                                             </p>
@@ -49,7 +49,7 @@
                                     </div>
                                 </div>
                                 <div class="w-full md:w-[40%] px-5">
-                                    <h6 class="font-bold mb-1">Delivery service</h6>
+                                    <h6 class="font-bold mb-1">Jasa pengiriman</h6>
                                     <p class="text-gray-500 text-sm">{{ $item->product->pengiriman }}</p>
                                 </div>
                             </div>
@@ -62,13 +62,13 @@
                                         class="h-16 rounded-lg" alt="{{ $getProduct->judul }}">
                                     <div>
                                         <h6 class="font-semibold capitalize">{{ $getProduct->judul }}</h6>
-                                        <p class="text-sm text-gray-500 my-1">{{ $getProduct->quantity }} item</p>
+                                        <p class="text-sm text-gray-500 my-1">{{ $getProduct->quantity }} produk</p>
                                         <p class="text-sm font-bold tracking-wide">Rp. {{ number_format($total) }}</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="w-full md:w-[40%] px-5">
-                                <h6 class="font-bold mb-1">Delivery service</h6>
+                                <h6 class="font-bold mb-1">Jasa pengiriman</h6>
                                 <p class="text-gray-500 text-sm">{{ $getProduct->pengiriman }}</p>
                             </div>
                         </div>
@@ -77,16 +77,16 @@
             </div>
         </div>
         <div class="w-full lg:w-1/3 p-5">
-            <div class="p-5 bg-blue-green rounded-3xl shadow-lg shadow-blue-green-200/40">
-                <h5 class="text-[22px] text-white font-bold">Shopping Summary</h5>
+            <div class="p-5 bg-blue-500 rounded-3xl shadow-lg shadow-blue-500/40">
+                <h5 class="text-[22px] text-white font-bold">Ringkasan Belanja</h5>
                 <div
-                    class="mt-4 flex items-center text-lg justify-between text-white font-medium border-b mb-4 pb-4 border-gray-200/40 capitalize">
-                    <p>Total price ({{ $getProducts === null ? $cart->sum('quantity') : $getProduct->quantity }} Items)
+                    class="mt-6 flex items-center justify-between text-white font-medium border-b mb-4 pb-4 border-gray-200/30 capitalize">
+                    <p>Total harga ({{ $getProducts === null ? $cart->sum('quantity') : $getProduct->quantity }} produk)
                     </p>
                     <p>Rp. {{ $getProducts === null ? number_format($cart->sum('price')) : number_format($total) }}</p>
                 </div>
-                <div class="mt-4 flex items-center text-lg justify-between text-white font-medium capitalize">
-                    <p>Total payment</p>
+                <div class="mt-4 flex items-center justify-between text-white font-medium capitalize">
+                    <p>Total pembayaran</p>
                     <p class="font-bold">Rp.
                         {{ $getProducts === null ? number_format($cart->sum('price')) : number_format($total) }}</p>
                 </div>
@@ -99,7 +99,7 @@
                             role="status" aria-label="loading">
                             <span class="sr-only">Loading...</span>
                         </span>
-                        Confirm Order
+                        Konfirmasi Pesanan
                     </button>
                 </div>
             </div>

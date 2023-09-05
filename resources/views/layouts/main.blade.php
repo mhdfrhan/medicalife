@@ -9,9 +9,7 @@
     <title>{{ config('app.name', 'Laravel') . ' | ' . $title }}</title>
 
     <!-- Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -20,7 +18,7 @@
     @livewireStyles
 </head>
 
-<body class="font-sans antialiased">
+<body class="font-sans antialiased" id="home">
 
     @include('partials.message')
     @include('partials.navbar')

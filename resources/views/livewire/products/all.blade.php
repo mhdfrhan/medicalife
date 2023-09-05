@@ -1,22 +1,22 @@
 <div>
     <div class="flex items-center justify-between">
         <div>
-            <h1 class="heading !capitalize !font-extrabold">Semua Produk</h1>
+            <h1 class="heading !capitalize !font-bold">Semua Produk</h1>
             <ul class="flex items-center gap-x-6 mt-6">
                 <li class="text-sm text-gray-500 font-bold">
                     Semua ({{ $allTotal }})
                 </li>
                 <li class="text-sm text-gray-500 font-bold">
-                    <span class="text-blue-green">Publish</span> ({{ $published }})
+                    <span class="text-blue-500">Publish</span> ({{ $published }})
                 </li>
                 <li class="text-sm text-gray-500 font-bold">
-                    <span class="text-blue-green">Draft</span> ({{ $drafts }})
+                    <span class="text-blue-500">Draft</span> ({{ $drafts }})
                 </li>
             </ul>
         </div>
         <a href="{{ route('tambah.products') }}" wire:navigate
-            class="py-2.5 px-4 text-center bg-blue-green text-sm text-white rounded-lg font-semibold hover:opacity-80 duration-300">
-            Add Product</a>
+            class="py-2.5 px-4 text-center bg-blue-500 text-sm text-white rounded-lg font-semibold hover:opacity-80 duration-300">
+            Tambah Produk</a>
     </div>
 
     <div class="mt-14">
@@ -69,7 +69,7 @@
 
                                         <td class="max-w-[250px]">
                                             <a href=""
-                                                class="line-clamp-3 font-semibold mb-0 text-blue-green hover:underline capitalize">
+                                                class="line-clamp-3 font-semibold mb-0 text-blue-500 hover:underline capitalize">
                                                 {{ $p->judul }}
                                             </a>
                                         </td>
@@ -130,7 +130,7 @@
                                                         </svg>
                                                     </button>
                                                 </div>
-                                                <div class="p-6 flex items-start gap-6">
+                                                <div class="p-6 pt-0 flex items-start gap-6">
                                                     <div
                                                         class="w-14 h-14 rounded-full flex items-center justify-center bg-rose-500 shrink-0">
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -149,7 +149,7 @@
                                                             dapat di pulihkan kembali, dan akan dihapus secara permanen.</p>
                                                     </div>
                                                 </div>
-                                                <div class="flex justify-end items-center gap-x-2 py-3 px-4">
+                                                <div class="flex justify-end items-center gap-x-2 py-3 px-4 pb-6">
                                                     <button type="button"
                                                         class="hs-dropdown-toggle py-2.5 px-4 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none text-sm duration-300"
                                                         data-hs-overlay="#alert-delete-{{ $i + 1 }}">

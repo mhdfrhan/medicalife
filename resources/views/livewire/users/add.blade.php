@@ -25,7 +25,7 @@
                     @enderror
                 </div>
 								<div class="mt-6">
-									<button {{ $name === NULL || $email === NULL || $password === NULL ? 'disabled' : '' }} class="py-3 px-4 text-center text-white bg-blue-green rounded-lg w-full font-semibold duration-300 {{ $name === NULL || $email === NULL || $password === NULL ? 'cursor-not-allowed bg-opacity-60' : 'active:scale-95' }}">Tambah user</button>
+									<button {{ $name === NULL || $email === NULL || $password === NULL ? 'disabled' : '' }} class="py-3 px-4 text-center text-white bg-blue-500 rounded-lg w-full font-semibold duration-300 {{ $name === NULL || $email === NULL || $password === NULL ? 'cursor-not-allowed bg-opacity-60' : 'active:scale-95' }}">Tambah user</button>
 								</div>
             </form>
         </div>

@@ -3,12 +3,12 @@
     <div class="flex flex-wrap -mx-5">
         @livewire('profile.menu')
         <div class="w-full lg:w-[70%] p-5">
-            <h5 class="label !text-xl">Transactions</h5>
+            <h5 class="label !text-xl">Transaksi</h5>
             <div class="p-5 bg-white rounded-2xl">
                 <div class="flex items-center gap-4 mb-8">
-                    <label for="sort" class="label">Sort by</label>
+                    <label for="sort" class="label">Urutkan</label>
                     <select wire:model.live='sort'
-                        class="border border-gray-200 rounded-lg focus:ring-blue-green focus:outline-none focus:border-blue-green focus:ring-offset-2 duration-300 focus:ring-2">
+                        class="border border-gray-200 rounded-lg focus:ring-blue-500 focus:outline-none focus:border-blue-500 focus:ring-offset-2 duration-300 focus:ring-2">
                         <option value="semua">Semua</option>
                         <option value="menunggu_konfirmasi">Menunggu Konfirmasi</option>
                         <option value="sedang_dikemas">Sedang Dikemas</option>
@@ -41,13 +41,13 @@
                                 <div class="w-full lg:w-[30%] px-4 text-right">
                                     <div class="flex flex-col h-full">
                                         <div>
-                                            <span class="text-sm capitalize text-blue-green font-bold">
+                                            <span class="text-sm capitalize text-blue-500 font-bold">
                                                 @if ($s->reviews->count() > 0)
-                                                    <span class="text-sm capitalize text-blue-green font-bold">
+                                                    <span class="text-sm capitalize text-blue-500 font-bold">
                                                         Sudah dinilai
                                                     </span>
                                                 @else
-                                                    <span class="text-sm capitalize text-blue-green font-bold">
+                                                    <span class="text-sm capitalize text-blue-500 font-bold">
                                                         {{ ucwords(str_replace('_', ' ', $s->status)) }}
                                                     </span>
                                                 @endif
@@ -69,18 +69,18 @@
                             @if ($s->status === 'selesai')
                                 <div class="mt-4 flex items-center justify-end gap-4">
                                     <a href="{{ route('user.review', strtolower($s->invoice)) }}" wire:navigate
-                                        class="px-4 text-blue-green border hover:bg-gray-100 duration-300 font-bold py-1.5 text-sm rounded-lg">
+                                        class="px-4 text-blue-500 border hover:bg-gray-100 duration-300 font-bold py-1.5 text-sm rounded-lg">
                                         {{ $s->reviews->count() > 0 ? 'Lihat' : 'Beri' }} ulasan
                                     </a>
                                     <button
-                                        class="px-4 bg-blue-green text-white font-bold py-1.5 text-sm rounded-lg">Beli
+                                        class="px-4 bg-blue-500 text-white font-bold py-1.5 text-sm rounded-lg">Beli
                                         Lagi</button>
                                 </div>
                             @endif
                             @if ($s->status === 'dibatalkan')
                                 <div class="mt-4 flex items-center justify-end gap-4">
                                     <button
-                                        class="px-4 bg-blue-green text-white font-bold py-1.5 text-sm rounded-lg">Beli
+                                        class="px-4 bg-blue-500 text-white font-bold py-1.5 text-sm rounded-lg">Beli
                                         Lagi</button>
                                 </div>
                             @endif

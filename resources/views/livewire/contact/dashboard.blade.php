@@ -2,13 +2,13 @@
     @include('partials.message')
     <ul class="flex items-center gap-x-6 mt-6">
         <li class="text-sm text-gray-500 font-bold">
-            <span class="text-blue-green">All</span> ({{ $messages->count() }})
+            <span class="text-blue-500">All</span> ({{ $messages->count() }})
         </li>
         <li class="text-sm text-gray-500 font-bold">
-            <span class="text-blue-green">Read</span> ({{ $read->count() }})
+            <span class="text-blue-500">Read</span> ({{ $read->count() }})
         </li>
         <li class="text-sm text-gray-500 font-bold">
-            <span class="text-blue-green">Unread</span> ({{ $unread->count() }})
+            <span class="text-blue-500">Unread</span> ({{ $unread->count() }})
         </li>
     </ul>
     <div class="mt-14">
@@ -19,7 +19,7 @@
                         <div class="{{ count($filterDelete) > 0 ? 'border-r pr-4 border-neutral-300' : '' }} flex items-center gap-x-1"
                             wire:click='filterDeleteAll'>
                             <input type="checkbox" id="selectAll" wire:model="selectAll"
-                                class="rounded text-blue-green focus:outline-blue-green duration-300 focus:ring-blue-green">
+                                class="rounded text-blue-500 focus:outline-blue-500 duration-300 focus:ring-blue-500">
                             <label for="selectAll" class="ml-2 select-none text-neutral-400">Pilih Semua</label>
                         </div>
 
@@ -51,7 +51,7 @@
                     <div class="relative group">
                         <div class="absolute top-[17px] lg:top-1/2 lg:-translate-y-1/2 left-0 pl-3 z-10">
                             <input type="checkbox" wire:model='filterDelete' value="{{ $message->id }}"
-                                class="rounded text-blue-green focus:outline-blue-green duration-300 focus:ring-blue-green">
+                                class="rounded text-blue-500 focus:outline-blue-500 duration-300 focus:ring-blue-500">
                         </div>
                         <div wire:click='read({{ $message->id }})' data-hs-overlay="#read-modal-{{ $i + 1 }}"
                             class="relative flex flex-wrap items-center justify-between -mx-4 mb-4 last-of-type:mb-0 border border-neutral-200 rounded-xl group cursor-pointer {{ $message->status == 0 || in_array($message->id, $filterDelete) ? 'bg-neutral-200' : 'bg-transparent' }} {{ in_array($message->id, $filterDelete) ? 'bg-neutral-200' : '' }}">
@@ -135,7 +135,7 @@
                                     <div class="flex justify-between gap-4">
                                         <div>
                                             <h5 class="font-bold text-2xl">Dari <span
-                                                    class="text-blue-green">{{ $message->name }}</span></h5>
+                                                    class="text-blue-500">{{ $message->name }}</span></h5>
                                             <p class="text-gray-400 text-sm">{{ $message->email }}</p>
                                         </div>
                                         <div class="text-gray-400 text-sm mt-1">
@@ -150,7 +150,7 @@
                                     </div>
                                     <div class="mt-8 text-right">
                                         <a href="mailto:{{ $message->email }}" target="_blank"
-                                            class="py-3 px-6 bg-blue-green text-sm
+                                            class="py-3 px-6 bg-blue-500 text-sm
 																				 text-white rounded-xl font-semibold inline-block active:scale-95 duration-300">Balas
                                             pesan ini</a>
                                     </div>
@@ -181,7 +181,7 @@
                                     <div class="flex justify-between gap-4">
                                         <div>
                                             <h5 class="font-bold text-2xl">Hapus Pesan Dari <span
-                                                    class="text-blue-green">{{ $message->name }}</span></h5>
+                                                    class="text-blue-500">{{ $message->name }}</span></h5>
                                             <p class="text-gray-400 text-sm">{{ $message->email }}</p>
                                         </div>
                                         <div class="text-gray-400 text-sm mt-1">
@@ -227,7 +227,7 @@
                                 <div class="flex justify-between gap-4">
                                     <div>
                                         <h5 class="font-bold text-2xl">Yakin hapus <span
-                                                class="text-blue-green">semua</span> pesan?</h5>
+                                                class="text-blue-500">semua</span> pesan?</h5>
                                     </div>
                                 </div>
                                 <div class="mt-6 bg-gray-200 rounded-2xl p-5">

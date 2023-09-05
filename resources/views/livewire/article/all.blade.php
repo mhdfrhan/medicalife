@@ -1,15 +1,36 @@
 <div>
-	@include('partials.message')
+    @include('partials.message')
+    <div class="flex items-center justify-between">
+        <div>
+            <h1 class="heading !capitalize !font-bold">Semua Artikel</h1>
+            <ul class="flex items-center gap-x-6 mt-6">
+                <li class="text-sm text-gray-500 font-bold">
+                    Semua ({{ $allTotal }})
+                </li>
+                <li class="text-sm text-gray-500 font-bold">
+                    <span class="text-blue-500">Publish</span> ({{ $drafts }})
+                </li>
+                <li class="text-sm text-gray-500 font-bold">
+                    <span class="text-blue-500">Draft</span> ({{ $publish }})
+                </li>
+            </ul>
+        </div>
+        <a href="{{ route('tambah.article') }}" wire:navigate
+            class="py-2.5 px-4 text-center bg-blue-500 text-sm text-white rounded-lg font-semibold hover:opacity-80 duration-300">
+            Tambah Artikel</a>
+    </div>
+
     <div class="mt-14">
         <div class="max-w-xs mb-8 mx-auto">
             <input type="text" class="input-form" wire:model.live='search' placeholder="ketik sesuatu disini...">
         </div>
+
         <div class=" bg-white p-6 rounded-2xl shadow-lg shadow-gray-200/20">
-            @empty($admins->count())
-                <div class="text-center text-sm text-neutral-500">Belum ada user saat ini.</div>
-            @else
-                <div class="w-full overflow-x-auto ">
-                    <div class=" min-w-max ">
+            <div class="w-full overflow-x-auto ">
+                <div class=" min-w-max ">
+                    @empty($articles->count())
+                        <div class="text-center text-sm text-neutral-500">Belum ada artikel saat ini.</div>
+                    @else
                         <table class="divide-y divide-gray-300 table ">
                             <thead>
                                 <tr>
@@ -20,45 +41,53 @@
                                         Image
                                     </th>
                                     <th scope="col">
-                                        Full Name
+                                        Judul
                                     </th>
                                     <th scope="col">
-                                        Email
+                                        Status
                                     </th>
                                     <th scope="col">
-                                        Phone Number
-                                    </th>
-                                    <th scope="col">
-                                        Joined at
+                                        Created At
                                     </th>
                                     <th scope="col"></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($admins as $i => $admin)
-                                    <tr wire:key="{{ $admin->id }}">
+                                @foreach ($articles as $i => $article)
+                                    <tr>
                                         <td><input type="checkbox" class="checkbox"></td>
                                         <td>
-                                            @if ($admin->image)
-                                                <img src="{{ asset('img/profile/' . $admin->image) }}"
-                                                    class="w-10 h-10 object-cover rounded-full"
-                                                    alt="Gambar {{ $admin->name }}">
-                                            @else
-                                                <span>-</span>
-                                            @endif
+                                            <img src="{{ asset('img/articles/' . $article->image) }}"
+                                                alt="{{ $article->title }}" class="h-14 object-cover rounded-lg">
                                         </td>
+                                        <td>{{ $article->title }}</td>
+                                        <td wire:click='changeStatus({{ $article->id }})' class="cursor-pointer">
+                                            <div class="hs-tooltip inline-block">
+                                                @if ($article->status === 1)
+                                                    <div
+                                                        class="hs-tooltip-toggle bg-green-400/60 border border-green-500 text-green-800 text-center inline-block px-3 py-0.5 text-xs rounded-full font-medium">
+                                                        Publish
+                                                        <span
+                                                            class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded-md shadow-sm dark:bg-slate-700"
+                                                            role="tooltip">
+                                                            Unpublish?
+                                                        </span>
+                                                    </div>
+                                                @else
+                                                    <div
+                                                        class="hs-tooltip-toggle bg-rose-400/60 border border-rose-500 text-rose-800 text-center inline-block px-3 py-0.5 text-xs rounded-full font-medium">
+                                                        Unpublish
+                                                        <span
+                                                            class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded-md shadow-sm dark:bg-slate-700"
+                                                            role="tooltip">
+                                                            Publish?
+                                                        </span>
+                                                    </div>
+                                                @endif
 
-                                        <td class="max-w-[250px]">
-                                            <a href="{{ route('detail.user', encrypt($admin->id)) }}" wire:navigate
-                                                class="line-clamp-3 font-semibold mb-0 text-blue-500 hover:underline capitalize">
-                                                {{ $admin->name }}
-                                            </a>
+                                            </div>
                                         </td>
-                                        <td>
-                                            {{ $admin->email }}
-                                        </td>
-                                        <td>{{ $admin->no_telepon ? $admin->no_telepon : '-' }}</td>
-                                        <td>{{ \Carbon\Carbon::parse($admin->created_at)->isoFormat('D MMM, YYYY') }}</td>
+                                        <td class="text-gray-400">{{ $article->created_at->diffForHumans() }}</td>
                                         <td>
                                             <div class="hs-dropdown relative inline-flex [--placement:bottom-right]">
                                                 <button id="dropdown-1"
@@ -75,12 +104,12 @@
                                                     <div class="hs-dropdown-open:ease-in hs-dropdown-open:opacity-100 hs-dropdown-open:scale-100 transition ease-out opacity-0 scale-95 duration-200 origin-top-right min-w-[1rem] bg-white shadow-lg shadow-gray-200 rounded-lg p-2"
                                                         aria-labelledby="dropdown-1" data-hs-transition>
                                                         <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100"
-                                                            href="{{ route('detail.user', encrypt($admin->id)) }}"
+                                                            href="{{ route('article.show', $article->slug) }}"
                                                             wire:navigate>
                                                             View
                                                         </a>
                                                         <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 mb-3 pb-3 border-b"
-                                                            href="{{ route('edit.user', encrypt($admin->id)) }}"
+                                                            href="{{ route('edit.article', $article->slug) }}"
                                                             wire:navigate>
                                                             Edit
                                                         </a>
@@ -113,7 +142,7 @@
                                                         </svg>
                                                     </button>
                                                 </div>
-                                                <div class="p-6 flex items-start gap-6">
+                                                <div class="p-6 pt-0 flex items-start gap-6">
                                                     <div
                                                         class="w-14 h-14 rounded-full flex items-center justify-center bg-rose-500 shrink-0">
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -125,22 +154,22 @@
                                                     </div>
                                                     <div>
                                                         <h5 class="text-xl font-bold">Apakah Anda yakin ingin menghapus
-                                                            user
+                                                            artikel
                                                             ini?</h5>
-                                                        <p class="text-sm text-gray-500 mt-2">Apabila dihapus, user ini
+                                                        <p class="text-sm text-gray-500 mt-2">Apabila dihapus, artikel ini
                                                             tidak
                                                             dapat di pulihkan kembali, dan akan dihapus secara permanen.</p>
                                                     </div>
                                                 </div>
-                                                <div class="flex justify-end items-center gap-x-2 py-3 px-4">
+                                                <div class="flex justify-end items-center gap-x-2 py-3 px-4 pb-6">
                                                     <button type="button"
                                                         class="hs-dropdown-toggle py-2.5 px-4 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none text-sm duration-300"
                                                         data-hs-overlay="#alert-delete-{{ $i + 1 }}">
                                                         Close
                                                     </button>
-                                                    <button wire:click='deleteUser({{ $admin->id }})'
+                                                    <button wire:click='deleteArticle({{ $article->id }})'
                                                         class="py-2.5 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-rose-500 text-white hover:bg-rose-600 focus:outline-none text-sm duration-300">
-                                                        Delete user
+                                                        Delete Article
                                                     </button>
                                                 </div>
                                             </div>
@@ -149,14 +178,10 @@
                                 @endforeach
                             </tbody>
                         </table>
-                    </div>
+                    @endempty
                 </div>
-                @if ($admins->count() >= 20)
-                    <div class="mt-10">
-                        {{ $admins->links() }}
-                    </div>
-                @endif
-            @endempty
+            </div>
         </div>
+
     </div>
 </div>

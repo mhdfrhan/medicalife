@@ -27,7 +27,7 @@
         </div>
         <div class="mt-6">
             <button type="submit"
-                class="py-5 px-4 text-center text-sm bg-blue-green rounded-xl text-white w-full font-semibold hover:bg-white hover:text-blue-green duration-300">Send
+                class="py-5 px-4 text-center text-sm bg-blue-500 rounded-xl text-white w-full font-semibold hover:bg-white hover:text-blue-500 duration-300">Send
                 Message</button>
         </div>
     </form>
