@@ -12,7 +12,13 @@
                     <div class="md:max-w-lg lg:ml-20">
                         <h1
                             class="uppercase text-2xl sm:text-3xl lg:text-4xl font-black text-center md:text-left !leading-normal">
-                            PUSAT LAYANAN KESEHATAN TERBAIK SE-INDONESIA</h1>
+                            PUSAT LAYANAN KESEHATAN TERBAIK SE-
+                            <span class="relative">
+                                INDONESIA
+                                <img src="{{ asset('img/circle.svg') }}"
+                                    class="absolute top-1/2 -translate-y-1/2 left-0 right-0 scale-110" alt="">
+                            </span>
+                        </h1>
                         <p class="text-gray-500 mt-5 mb-8 text-center md:text-left">Kami akan selalu memberikan
                             pelayanan
                             terbaik
@@ -53,11 +59,11 @@
     <section class="pt-8 lg:py-14 px-5" id="about">
         <div class="max-w-6xl mx-auto">
             <div class="flex flex-wrap items-center -mx-5">
-                <div class="w-full lg:w-1/2 p-5">
+                <div class="w-full lg:w-1/2 p-5 overflow-hidden">
                     <img src="{{ asset('img/about.png') }}" class="mx-auto lg:mx-0 rounded-tl-[2rem] rounded-br-[2rem]"
                         alt="">
                 </div>
-                <div class="w-full lg:w-1/2 p-5">
+                <div class="w-full lg:w-1/2 p-5 overflow-hidden">
                     <h1 class="heading">tentang kami</h1>
                     <p class=" text-gray-500 text-sm my-6 !leading-7">Medical adalah pusat layanan kesehatan yang
                         menyediakan berbagai layanan kesehatan, seperti konsultasi dokter, rawat jalan, rawat inap,
@@ -73,7 +79,7 @@
                 </div>
             </div>
             <div class="flex flex-wrap items-center -mx-5 lg:mt-16">
-                <div class="w-full lg:w-1/2 p-5 order-2 lg:order-1">
+                <div class="w-full lg:w-1/2 p-5 order-2 lg:order-1 overflow-hidden">
                     <h1 class="heading">fasilitas yang sangat lengkap</h1>
                     <p class=" text-gray-500 text-sm my-6 !leading-7">Medicalife menyediakan fasilitas kesehatan yang
                         lengkap dan berkualitas, mulai dari rawat inap hingga rawat jalan. Fasilitas kesehatan ini
@@ -98,9 +104,9 @@
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
                 <div class="overflow-hidden rounded-2xl">
                     <div
-                        class="p-5 bg-white border border-transparent rounded-2xl shadow-lg shadow-gray-200 relative group hover:bg-blue-500 duration-300">
+                        class="p-5 bg-white border border-transparent rounded-2xl shadow-lg shadow-gray-200 relative group hover:bg-blue-500 duration-300 overflow-hidden">
                         <div
-                            class="absolute -top-10 -left-10 bg-blue-500 w-28 h-28 rounded-full duration-500 group-hover:inset-0 group-hover:rounded-br-full group-hover:w-20 group-hover:h-20 group-hover:rounded-none">
+                            class="absolute -top-10 -left-10 bg-blue-500 w-28 shadow-lg shadow-blue-500/30 h-28 rounded-full duration-500 group-hover:inset-0 group-hover:rounded-br-full group-hover:w-20 group-hover:h-20 group-hover:rounded-none">
                         </div>
                         <img src="{{ asset('img/icons/mata.svg') }}"
                             class="w-9 h-9 -translate-x-1.5 -translate-y-1.5 group-hover:translate-x-0 group-hover:translate-y-0 duration-500 relative z-10"
@@ -119,9 +125,9 @@
                 </div>
                 <div class="overflow-hidden rounded-2xl">
                     <div
-                        class="p-5 bg-white border border-transparent rounded-2xl shadow-lg shadow-gray-200 relative group hover:bg-blue-500 duration-300">
+                        class="p-5 bg-white border border-transparent rounded-2xl shadow-lg shadow-gray-200 relative group hover:bg-blue-500 duration-300 overflow-hidden">
                         <div
-                            class="absolute -top-10 -left-10 bg-blue-500 w-28 h-28 rounded-full duration-500 group-hover:inset-0 group-hover:rounded-br-full group-hover:w-20 group-hover:h-20 group-hover:rounded-none">
+                            class="absolute -top-10 -left-10 bg-blue-500 w-28 shadow-lg shadow-blue-500/30 h-28 rounded-full duration-500 group-hover:inset-0 group-hover:rounded-br-full group-hover:w-20 group-hover:h-20 group-hover:rounded-none">
                         </div>
                         <img src="{{ asset('img/icons/gigi.svg') }}"
                             class="w-8 h-8 -translate-x-1.5 -translate-y-1.5 group-hover:translate-x-0 group-hover:translate-y-0 duration-500 relative z-10"
@@ -140,9 +146,9 @@
                 </div>
                 <div class="overflow-hidden rounded-2xl">
                     <div
-                        class="p-5 bg-white border border-transparent rounded-2xl shadow-lg shadow-gray-200 relative group hover:bg-blue-500 duration-300">
+                        class="p-5 bg-white border border-transparent rounded-2xl shadow-lg shadow-gray-200 relative group hover:bg-blue-500 duration-300 overflow-hidden">
                         <div
-                            class="absolute -top-10 -left-10 bg-blue-500 w-28 h-28 rounded-full duration-500 group-hover:inset-0 group-hover:rounded-br-full group-hover:w-20 group-hover:h-20 group-hover:rounded-none">
+                            class="absolute -top-10 -left-10 bg-blue-500 w-28 shadow-lg shadow-blue-500/30 h-28 rounded-full duration-500 group-hover:inset-0 group-hover:rounded-br-full group-hover:w-20 group-hover:h-20 group-hover:rounded-none">
                         </div>
                         <img src="{{ asset('img/icons/tht.svg') }}"
                             class="w-8 h-8 -translate-x-1.5 -translate-y-1.5 group-hover:translate-x-0 group-hover:translate-y-0 duration-500 relative z-10"
@@ -161,9 +167,9 @@
                 </div>
                 <div class="overflow-hidden rounded-2xl">
                     <div
-                        class="p-5 bg-white border border-transparent rounded-2xl shadow-lg shadow-gray-200 relative group hover:bg-blue-500 duration-300">
+                        class="p-5 bg-white border border-transparent rounded-2xl shadow-lg shadow-gray-200 relative group hover:bg-blue-500 duration-300 overflow-hidden">
                         <div
-                            class="absolute -top-10 -left-10 bg-blue-500 w-28 h-28 rounded-full duration-500 group-hover:inset-0 group-hover:rounded-br-full group-hover:w-20 group-hover:h-20 group-hover:rounded-none">
+                            class="absolute -top-10 -left-10 bg-blue-500 w-28 shadow-lg shadow-blue-500/30 h-28 rounded-full duration-500 group-hover:inset-0 group-hover:rounded-br-full group-hover:w-20 group-hover:h-20 group-hover:rounded-none">
                         </div>
                         <img src="{{ asset('img/icons/umum.svg') }}"
                             class="w-8 h-8 -translate-x-1.5 -translate-y-1.5 group-hover:translate-x-0 group-hover:translate-y-0 duration-500 relative z-10"
@@ -386,6 +392,33 @@
     </section>
 
     {{-- end article --}}
+
+
+    {{-- doctor --}}
+
+    <section class="pt-14 lg:py-14 px-5">
+        <div class="max-w-6xl mx-auto">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h1 class="heading">Dokter</h1>
+                <p class="mt-6 text-sm  text-gray-500 leading-relaxed">
+                    Ini adalah beberapa dokter yang sangat profesional dan terampil dibidangnya.
+                </p>
+            </div>
+            <div class="swiper dokter">
+                <div class="swiper-wrapper">
+                    @for ($i = 0; $i < 6; $i++)
+                        <div class="swiper-slide">
+													
+												</div>
+                    @endfor
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    {{-- end doctor --}}
 
 
 

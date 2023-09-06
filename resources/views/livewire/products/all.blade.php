@@ -70,7 +70,7 @@
                                         </td>
 
                                         <td class="max-w-[250px]">
-                                            <a href=""
+                                            <a href="{{ route('detail.product', $p->slug) }}" wire:navigate
                                                 class="line-clamp-3 font-semibold mb-0 text-blue-500 hover:underline capitalize">
                                                 {{ $p->judul }}
                                             </a>

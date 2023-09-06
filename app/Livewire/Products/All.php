@@ -25,6 +25,7 @@ class All extends Component
 		$publish = Products::where('publish', 1)->get()->count();
 		$draft = Products::where('publish', 0)->get()->count();
 
+
 		return view('livewire.products.all', [
 			'allTotal' => $products->count(),
 			'published' => $publish,

@@ -62,7 +62,11 @@
                                             <img src="{{ asset('img/articles/' . $article->image) }}"
                                                 alt="{{ $article->title }}" class="h-14 object-cover rounded-lg">
                                         </td>
-                                        <td>{{ $article->title }}</td>
+                                        <td>
+                                            <a class="hover:text-blue-500" href="{{ route('article.show', $article->slug) }}" wire:navigate>
+                                                {{ $article->title }}
+                                            </a>
+                                        </td>
                                         <td wire:click='changeStatus({{ $article->id }})' class="cursor-pointer">
                                             <div class="hs-tooltip inline-block">
                                                 @if ($article->status === 1)
@@ -89,7 +93,8 @@
 
                                             </div>
                                         </td>
-                                        <td class="text-gray-400" wire:poll.60s>{{ $article->created_at->diffForHumans() }}</td>
+                                        <td class="text-gray-400" wire:poll.60s>{{ $article->created_at->diffForHumans() }}
+                                        </td>
                                         <td>
                                             <div class="hs-dropdown relative inline-flex [--placement:bottom-right]">
                                                 <button id="dropdown-1"

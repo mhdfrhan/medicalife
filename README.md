@@ -23,6 +23,7 @@ Medicalife is a comprehensive platform that aims to provide valuable health info
 
 * Health products
 * Product ordering
+* Articles
 * User login and registration
 * Product management
 * User management
