@@ -113,9 +113,8 @@
                     </div>
 
                     {{-- modal read --}}
-                    <div id="read-modal-{{ $i + 1 }}"
-                        class="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[260] overflow-x-hidden overflow-y-auto"
-                        wire:ignore>
+                    <div wire:ignore id="read-modal-{{ $i + 1 }}"
+                        class="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[260] overflow-x-hidden overflow-y-auto">
                         <div
                             class="hs-overlay-open:opacity-100 hs-overlay-open:scale-100 hs-overlay-open:duration-300 opacity-0 scale-95 transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center">
                             <div class="flex flex-col bg-white border shadow-sm rounded-xl w-full">

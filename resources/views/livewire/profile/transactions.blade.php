@@ -72,9 +72,9 @@
                                         class="px-4 text-blue-500 border hover:bg-gray-100 duration-300 font-bold py-1.5 text-sm rounded-lg">
                                         {{ $s->reviews->count() > 0 ? 'Lihat' : 'Beri' }} ulasan
                                     </a>
-                                    <button
+                                    <a href="{{ route('detail.product', $s->product->slug) }}" wire:navigate
                                         class="px-4 bg-blue-500 text-white font-bold py-1.5 text-sm rounded-lg">Beli
-                                        Lagi</button>
+                                        Lagi</a>
                                 </div>
                             @endif
                             @if ($s->status === 'dibatalkan')

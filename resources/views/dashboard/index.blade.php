@@ -4,8 +4,8 @@
     <div class="">
         <h3 class="font-bold">Dashboard</h3>
 
-        <div class="mt-6 bg-blue-green rounded-3xl py-8 px-8">
-            <h5 class="text-white font-bold text-3xl">Hello, Welcome {{ Auth::user()->name }}</h5>
+        <div class="mt-6 bg-blue-500 rounded-3xl py-8 px-8">
+            <h5 class="text-white font-bold text-3xl mb-2">Hello, Welcome {{ Auth::user()->name }}</h5>
             <p class="text-gray-200">Here is what’s happening with your projects today</p>
         </div>
         <div class="mt-6 flex flex-wrap -mx-4">
@@ -180,7 +180,7 @@
 
 																			<td class="max-w-[250px]">
 																					<a href="{{ route('detail.user', encrypt($user->id)) }}" wire:navigate
-																							class="line-clamp-3 font-semibold mb-0 text-blue-green hover:underline capitalize">
+																							class="line-clamp-3 font-semibold mb-0 text-blue-500 hover:underline capitalize">
 																							{{ $user->name }}
 																					</a>
 																			</td>

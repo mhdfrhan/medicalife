@@ -14,9 +14,6 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ['Plus Jakarta Sans', ...defaultTheme.fontFamily.sans],
-			},
-			colors: {
-				'blue-green': '#03989E'
 			}
 		},
 	},

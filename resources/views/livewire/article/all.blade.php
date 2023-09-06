@@ -1,6 +1,6 @@
 <div>
     @include('partials.message')
-    <div class="flex items-center justify-between">
+    <div class="sm:flex items-center justify-between">
         <div>
             <h1 class="heading !capitalize !font-bold">Semua Artikel</h1>
             <ul class="flex items-center gap-x-6 mt-6">
@@ -15,9 +15,11 @@
                 </li>
             </ul>
         </div>
-        <a href="{{ route('tambah.article') }}" wire:navigate
-            class="py-2.5 px-4 text-center bg-blue-500 text-sm text-white rounded-lg font-semibold hover:opacity-80 duration-300">
-            Tambah Artikel</a>
+        <div class="mt-6 sm:mt-0 text-right">
+            <a href="{{ route('tambah.article') }}" wire:navigate
+                class="py-2.5  px-4 text-center bg-blue-500 text-sm text-white rounded-lg font-semibold hover:opacity-80 duration-300 shadow-lg shadow-blue-500/30">
+                Tambah Artikel</a>
+        </div>
     </div>
 
     <div class="mt-14">
@@ -87,7 +89,7 @@
 
                                             </div>
                                         </td>
-                                        <td class="text-gray-400">{{ $article->created_at->diffForHumans() }}</td>
+                                        <td class="text-gray-400" wire:poll.60s>{{ $article->created_at->diffForHumans() }}</td>
                                         <td>
                                             <div class="hs-dropdown relative inline-flex [--placement:bottom-right]">
                                                 <button id="dropdown-1"

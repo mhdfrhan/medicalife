@@ -5,11 +5,11 @@
         <div class="max-w-6xl mx-auto">
             <div class="mb-14">
                 <a href="{{ route('articles') }}" wire:navigate
-                    class="w-14 h-14 bg-gray-200 rounded-full hover:bg-blue-500 duration-300 hover:text-white flex items-center justify-center">
+                    class="w-14 h-14 flex items-center justify-center rounded-full bg-blue-500 shadow-lg shadow-blue-500/30 text-white mb-8">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+                            d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
                     </svg>
                 </a>
             </div>

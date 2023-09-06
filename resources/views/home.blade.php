@@ -40,7 +40,8 @@
                     </div>
                 </div>
                 <div class="w-full md:w-1/2 p-5 pb-0">
-                    <img src="{{ asset('img/banner.png') }}" class="w-[300px] mx-auto max-h-[450px] object-cover object-top sm:max-h-max" alt="">
+                    <img src="{{ asset('img/banner.png') }}"
+                        class="w-[300px] mx-auto max-h-[450px] object-cover object-top sm:max-h-max" alt="">
                 </div>
             </div>
         </div>
@@ -226,13 +227,13 @@
 
             <div class="text-center mt-12">
                 <a href="{{ route('all.products') }}" wire:navigate
-                    class="py-3 px-4 sm:px-5 bg-blue-500 text-white rounded-xl inline-flex items-center gap-x-3 text-xs sm:text-sm group">
+                    class="py-3 px-4 sm:px-5 bg-blue-500 text-white shadow-lg shadow-blue-500/30 rounded-xl inline-flex items-center gap-x-3 text-xs sm:text-sm group">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-4 h-4 animate-bounce">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
                     </svg>
-                    <span class="font-medium inline-block">More Products</span>
+                    <span class="font-medium inline-block">Semua Produk</span>
                 </a>
             </div>
         </div>
@@ -363,12 +364,23 @@
                                 class="hover:text-blue-500 duration-300">
                                 <h5 class="font-semibold text-lg line-clamp-2">{{ $article->title }}</h5>
                             </a>
-                            <div class="mt-3 text-gray-400 text-sm">
+                            <div class="mt-3 text-gray-400 text-sm text-right">
                                 {{ $article->created_at->diffForHumans() }}
                             </div>
                         </div>
                     </div>
                 @endforeach
+            </div>
+            <div class="text-center mt-12">
+                <a href="{{ route('articles') }}" wire:navigate
+                    class="py-3 px-4 sm:px-5 bg-blue-500 text-white shadow-lg shadow-blue-500/30 rounded-xl inline-flex items-center gap-x-3 text-xs sm:text-sm group">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-4 h-4 animate-bounce">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+                    </svg>
+                    <span class="font-medium inline-block">Semua Artikel</span>
+                </a>
             </div>
         </div>
     </section>

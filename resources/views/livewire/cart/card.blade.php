@@ -10,7 +10,7 @@
                                 class="rounded-xl mx-auto bg-gray-200" alt="">
                         </a>
                         <button
-                            class="w-10 h-10 flex items-center justify-center rounded-xl bg-blue-500 text-white absolute top-2 -right-20 group-hover:right-2 duration-500 transition-all ease-in-out hover:bg-white hover:text-blue-500 shadow-lg shadow-blue-500/20"
+                            class="w-10 h-10 flex items-center justify-center rounded-xl bg-blue-500 text-white absolute top-2 right-2 lg:-right-20 lg:group-hover:right-2 duration-500 transition-all ease-in-out hover:bg-white hover:text-blue-500 shadow-lg shadow-blue-500/20"
                             wire:click='addToCart({{ $p->id }})'>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6">

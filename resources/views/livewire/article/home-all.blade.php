@@ -27,7 +27,7 @@
                             class="hover:text-blue-500 duration-300">
                             <h5 class="font-semibold text-lg line-clamp-2">{{ $article->title }}</h5>
                         </a>
-                        <div class="mt-3 text-gray-400 text-sm">
+                        <div class="mt-3 text-gray-400 text-sm text-right">
                             {{ $article->created_at->diffForHumans() }}
                         </div>
                     </div>

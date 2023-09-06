@@ -18,22 +18,22 @@
 @endpush
 
 <div>
-    <div class="flex items-center justify-between">
+    <div class="sm:flex items-center justify-between">
         <div>
             <h1 class="heading !capitalize !font-bold">Tambah artikel</h1>
             <p class="text-gray-500 mt-2">Silahkan tambahkan artikel Anda dibawah ini.</p>
         </div>
-        <div class="mt-8 flex items-center gap-3">
+        <div class="mt-8 flex items-center gap-3 justify-end sm:justify-start">
             <button wire:click='draft'
                 class="py-2.5 px-4 text-center border-gray-300 hover:bg-gray-200 hover:border-gray-200 border text-sm text-blue-500 rounded-lg font-semibold duration-300">Simpan
                 ke Draft</button>
             <button wire:click='save'
-                class="py-2.5 px-4 text-center bg-blue-500 text-sm text-white rounded-lg font-semibold hover:opacity-80 duration-300">Publish
+                class="py-2.5 px-4 text-center bg-blue-500 text-sm text-white rounded-lg font-semibold hover:opacity-80 shadow-lg shadow-blue-500/30 duration-300">Publish
                 Artikel</button>
         </div>
     </div>
 
-    <div class="max-w-3xl mt-16">
+    <div class="max-w-3xl mt-10 sm:mt-14">
         <form>
             <div class="mb-4">
                 <label for="image" class="label">Gambar</label>

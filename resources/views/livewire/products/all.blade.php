@@ -1,5 +1,5 @@
 <div>
-    <div class="flex items-center justify-between">
+    <div class="sm:flex items-center justify-between">
         <div>
             <h1 class="heading !capitalize !font-bold">Semua Produk</h1>
             <ul class="flex items-center gap-x-6 mt-6">
@@ -14,12 +14,14 @@
                 </li>
             </ul>
         </div>
-        <a href="{{ route('tambah.products') }}" wire:navigate
-            class="py-2.5 px-4 text-center bg-blue-500 text-sm text-white rounded-lg font-semibold hover:opacity-80 duration-300">
-            Tambah Produk</a>
+        <div class="mt-6 sm:mt-0 text-right">
+            <a href="{{ route('tambah.products') }}" wire:navigate
+                class="py-2.5  px-4 text-center bg-blue-500 text-sm text-white rounded-lg font-semibold hover:opacity-80 duration-300 shadow-lg shadow-blue-500/30">
+                Tambah Produk</a>
+        </div>
     </div>
 
-    <div class="mt-14">
+    <div class="mt-10 sm:mt-14">
         <div class="max-w-xs mb-8 mx-auto">
             <input type="text" class="input-form" wire:model.live='search' placeholder="ketik sesuatu disini...">
         </div>

@@ -1,5 +1,5 @@
 <div>
-    @if (!Auth::user()->alamat && !Auth::user()->no_telepon)
+    @if (!Auth::user()->alamat || !Auth::user()->no_telepon)
         <div
             class="w-full py-2.5 text-center bg-red-500 rounded-xl text-white font-semibold mb-5 shadow-lg shadow-red-500/30">
             Silahkan lengkapi akun Anda terlebih dahulu. <a href="{{ route('user.dashboard') }}" wire:navigate
@@ -91,8 +91,8 @@
                         {{ $getProducts === null ? number_format($cart->sum('price')) : number_format($total) }}</p>
                 </div>
                 <div class="mt-6">
-                    <button {{ !Auth::user()->alamat && !Auth::user()->no_telepon ? 'disabled' : '' }}
-                        class="w-full py-2.5 rounded-xl font-bold duration-300 items-center inline-flex justify-center gap-4  {{ !Auth::user()->alamat && !Auth::user()->no_telepon ? 'cursor-not-allowed bg-gray-200/80' : 'bg-white  active:scale-95 cursor-pointer' }}"
+                    <button {{ !Auth::user()->alamat || !Auth::user()->no_telepon ? 'disabled' : '' }}
+                        class="w-full py-2.5 rounded-xl font-bold duration-300 items-center inline-flex justify-center gap-4  {{ !Auth::user()->alamat || !Auth::user()->no_telepon ? 'cursor-not-allowed bg-gray-200/80' : 'bg-white  active:scale-95 cursor-pointer' }}"
                         wire:click='confirm'>
                         <span wire:loading wire:target='confirm'
                             class="animate-spin inline-block w-4 h-4 border-[2px] border-current border-t-transparent text-gray-800 rounded-full"

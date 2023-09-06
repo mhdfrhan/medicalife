@@ -15,7 +15,7 @@ class DetailOrder extends Component
 		$sales = Sales::where('invoice', strtoupper($this->invoice))->first();
 
 		if (!$sales) {
-			return $this->redirect(route('dashboard'), navigate:true);
+			return $this->redirect(route('dashboard'), navigate: true);
 		}
 
 		if ($sales) {
@@ -53,5 +53,7 @@ class DetailOrder extends Component
 			->update(['status' => $this->status]);
 
 		session()->flash('message', 'Status berhasil diperbarui.');
+
+		$this->dispatch('statusUpdated');
 	}
 }

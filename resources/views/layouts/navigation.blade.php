@@ -112,6 +112,7 @@
                                 <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-300 rounded-lg font-semibold {{ request()->routeIs('dashboard.orders') ? 'bg-gray-700' : 'hover:bg-gray-700' }}"
                                     href="{{ route('dashboard.orders') }}" wire:navigate>
                                     Order
+                                    @livewire('products.orders-icon')
                                 </a>
                             </li>
                         </ul>
@@ -127,44 +128,47 @@
                                 d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
                         </svg>
                         Messages
+                        @livewire('contact.icon')
                     </a>
                 </li>
 
-								<li class="hs-accordion {{ request()->is('dashboard/article*') ? 'active' : '' }}"
-									id="nav-ecommerce">
-									<a class="hs-accordion-toggle flex items-center gap-x-3.5 py-2 px-3 hs-accordion-active:text-blue-green text-sm text-gray-300 rounded-lg  {{ request()->is('dashboard/article*') ? 'bg-gray-700' : 'hover:bg-gray-700' }} font-semibold duration-300"
-											href="javascript:;">
-											<div class="flex items-center gap-x-2">
-													<svg class="hs-accordion-active:rotate-0 -rotate-90 duration-300 ml-auto block w-2.5 h-2.5 text-gray-400 group-hover:text-gray-400"
-															viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
-																	stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-													</svg>
-													<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[18px] h-[18px]">
-														<path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
-													</svg>		
-											</div>
-											Artikel
-									</a>
+                <li class="hs-accordion {{ request()->is('dashboard/article*') ? 'active' : '' }}"
+                    id="nav-ecommerce">
+                    <a class="hs-accordion-toggle flex items-center gap-x-3.5 py-2 px-3 hs-accordion-active:text-blue-green text-sm text-gray-300 rounded-lg  {{ request()->is('dashboard/article*') ? 'bg-gray-700' : 'hover:bg-gray-700' }} font-semibold duration-300"
+                        href="javascript:;">
+                        <div class="flex items-center gap-x-2">
+                            <svg class="hs-accordion-active:rotate-0 -rotate-90 duration-300 ml-auto block w-2.5 h-2.5 text-gray-400 group-hover:text-gray-400"
+                                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="w-[18px] h-[18px]">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+                            </svg>
+                        </div>
+                        Artikel
+                    </a>
 
-									<div id="nav-ecommerce"
-											class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300  {{ request()->is('dashboard/article*') ? '' : 'hidden' }}">
-											<ul class="pt-2 pl-9">
-													<li>
-															<a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-300 rounded-lg font-semibold {{ request()->routeIs('dashboard.article') ? 'bg-gray-700' : 'hover:bg-gray-700' }}"
-																	href="{{ route('dashboard.article') }}" wire:navigate>
-																	Semua Artikel
-															</a>
-													</li>
-													<li>
-															<a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-300 rounded-lg font-semibold {{ request()->routeIs('tambah.article') ? 'bg-gray-700' : 'hover:bg-gray-700' }}"
-																	href="{{ route('tambah.article') }}" wire:navigate>
-																	Tambah Artikel
-															</a>
-													</li>
-											</ul>
-									</div>
-							</li>
+                    <div id="nav-ecommerce"
+                        class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300  {{ request()->is('dashboard/article*') ? '' : 'hidden' }}">
+                        <ul class="pt-2 pl-9">
+                            <li>
+                                <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-300 rounded-lg font-semibold {{ request()->routeIs('dashboard.article') ? 'bg-gray-700' : 'hover:bg-gray-700' }}"
+                                    href="{{ route('dashboard.article') }}" wire:navigate>
+                                    Semua Artikel
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-300 rounded-lg font-semibold {{ request()->routeIs('tambah.article') ? 'bg-gray-700' : 'hover:bg-gray-700' }}"
+                                    href="{{ route('tambah.article') }}" wire:navigate>
+                                    Tambah Artikel
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
 
                 <div class="!mt-8">
                     <p class="text-gray-400 text-sm font-semibold	">Settings</p>

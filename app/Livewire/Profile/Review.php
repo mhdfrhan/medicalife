@@ -16,7 +16,7 @@ class Review extends Component
 
 	protected $rules = [
 		'rating' => 'required|integer|between:1,5',
-		'review' => 'required|min:5'
+		'review' => 'nullable|min:5'
 	];
 
 	protected $messages = [

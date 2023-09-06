@@ -1,5 +1,12 @@
 <div>
     @include('partials.message')
+    <a href="{{ route('all.products') }}" wire:navigate
+        class="w-14 h-14 flex items-center justify-center rounded-full bg-blue-500 shadow-lg shadow-blue-500/30 text-white mb-8">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+        </svg>
+    </a>
     <div class="flex flex-wrap -mx-5">
         <div class="w-full md:w-[40%] p-5" wire:ignore>
             <div>
@@ -97,12 +104,13 @@
                                 </svg>
                             </button>
                         </div>
-                        <span class="text-sm text-gray-500">Tersisa {{ $detail->stok }} produk</span>
+                        <span class="text-xs font-medium sm:text-sm text-gray-500">Tersisa {{ $detail->stok }}
+                            produk</span>
                     </div>
                 </div>
-                <div class="mt-14 flex items-center justify-end gap-x-4">
+                <div class="mt-14 sm:flex items-center justify-end gap-x-4">
                     <button wire:click='addToCart({{ $detail->id }})'
-                        class="flex items-center gap-x-3 border py-3 px-6 border-blue-500  text-blue-500 rounded-lg hover:bg-blue-500/10 duration-300">
+                        class="flex w-full sm:w-auto mb-3 sm:mb-0 items-center gap-x-3 border py-3 px-6 border-blue-500  text-blue-500 rounded-lg hover:bg-blue-500/10 duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -111,7 +119,7 @@
                         <span>Masukkan ke keranjang</span>
                     </button>
                     <button wire:click='buyNow({{ $detail->id }})'
-                        class="border py-3 px-6 border-blue-500 bg-blue-500 text-white rounded-lg hover:opacity-80 duration-300">
+                        class="border w-full sm:w-auto py-3 px-6 border-blue-500 bg-blue-500 text-white rounded-lg hover:opacity-80 duration-300">
                         <span>Beli Sekarang</span>
                     </button>
                 </div>

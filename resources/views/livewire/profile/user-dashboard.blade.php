@@ -14,10 +14,16 @@
                 <div>
                     <form wire:submit='updateData'>
                         <div class="mb-6 last-of-type:mb-0">
-                            <label for="image" class="label">Gambar</label>
+                            <div class="flex items-center gap-4 mb-2">
+                                <label for="image" class="label !m-0">Gambar</label>
+                                @if (Auth::user()->image)
+                                    <button type="button" class="text-sm text-red-600 hover:underline font-medium"
+                                        wire:click='hapusGambar'>Hapus gambar</button>
+                                @endif
+                            </div>
                             <input type="file" id="image" class="input-form" wire:model.blur='image'
                                 autocomplete="off">
-																<small>Foto harus maksimal 2mb dan harus Square Portrait</small>
+                            <small>Foto harus maksimal 2mb dan harus Square Portrait</small>
                             @error('image')
                                 <span class="error-msg">{{ $message }}</span>
                             @enderror
@@ -56,7 +62,8 @@
                         </div>
                         <div class="mt-8">
                             <button
-                                class="py-3 px-4 text-center font-bold bg-blue-500 rounded-xl w-full text-white active:scale-95 duration-300">Perbarui Akun Saya</button>
+                                class="py-3 px-4 text-center font-bold bg-blue-500 rounded-xl w-full text-white active:scale-95 duration-300">Perbarui
+                                Akun Saya</button>
                             <small class="mt-3 text-gray-500 text-center block">Kami sangat menjaga privasi dan keamanan
                                 data Anda. Keamanan data Anda adalah prioritas utama bagi kami.</small>
                         </div>

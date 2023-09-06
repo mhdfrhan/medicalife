@@ -41,6 +41,11 @@ class Index extends Component
 
 	public function confirm()
 	{
+
+		if (!Auth::user()->alamat || !Auth::user()->no_telepon) {
+			return $this->redirect(route('user.dashboard'), navigate: true);
+		}
+
 		$user = Auth::user();
     $invoicePrefix = 'INV';
 

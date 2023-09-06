@@ -33,21 +33,21 @@
 @endpush
 
 <div>
-    <div class="flex items-center justify-between">
+    <div class="sm:flex items-center justify-between">
         <div>
             <h1 class="heading !capitalize !font-bold">Tambah Produk</h1>
             <p class="text-gray-500 mt-2">Silahkan tambahkan produk Anda dibawah ini.</p>
         </div>
-        <div class="mt-8 flex items-center gap-3">
+        <div class="mt-8 flex items-center justify-end sm:justify-start gap-3">
             <button wire:click='draft'
                 class="py-2.5 px-4 text-center border-gray-300 hover:bg-gray-200 hover:border-gray-200 border text-sm text-blue-500 rounded-lg font-semibold duration-300">Simpan
                 ke Draft</button>
             <button wire:click='save'
-                class="py-2.5 px-4 text-center bg-blue-500 text-sm text-white rounded-lg font-semibold hover:opacity-80 duration-300">Publish
+                class="py-2.5 px-4 text-center bg-blue-500 text-sm text-white rounded-lg font-semibold hover:opacity-80 shadow-lg shadow-blue-500/30 duration-300">Publish
                 Product</button>
         </div>
     </div>
-    <div class="mt-14 flex flex-wrap -mx-5">
+    <div class="mt-10 sm:mt-14 flex flex-wrap -mx-5">
         <div class="w-full lg:w-[60%] px-5">
             <div class="mb-6">
                 <h6 class="label">Gambar produk</h6>

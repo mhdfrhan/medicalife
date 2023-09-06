@@ -17,7 +17,7 @@ return new class extends Migration
 						$table->foreignId('product_id')->references('id')->on('products');
 						$table->string('invoice');
 						$table->integer('rating');
-						$table->text('comment');
+						$table->text('comment')->nullable();
             $table->timestamps();
         });
     }

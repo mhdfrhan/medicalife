@@ -33,6 +33,8 @@ class Dashboard extends Component
 		$message->update([
 			'status' => 1
 		]);
+
+		$this->dispatch('messageUpdated');
 	}
 
 	public function unread($id)
@@ -46,6 +48,8 @@ class Dashboard extends Component
 		$message->update([
 			'status' => 0
 		]);
+
+		$this->dispatch('messageUpdated');
 	}
 
 	public function render()

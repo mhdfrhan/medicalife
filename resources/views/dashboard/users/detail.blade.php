@@ -18,6 +18,11 @@
     </div>
 
     <div class="mt-14">
+			<a href="{{ route('all.users') }}" wire:navigate class="w-14 h-14 flex items-center justify-center rounded-full bg-blue-500 shadow-lg shadow-blue-500/30 text-white">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+				</svg>				
+			</a>
         <div class="flex flex-wrap -mx-5">
             <div class="w-full xl:w-2/3 p-5">
                 <div class="bg-white p-5 shadow-lg shadow-gray-200/40 rounded-2xl">
@@ -96,7 +101,7 @@
         <div>
             <nav class="flex space-x-4" aria-label="Tabs" role="tablist">
                 <button type="button"
-                    class="hs-tab-active:font-semibold font-medium hs-tab-active:border-blue-green hs-tab-active:text-blue-green py-4 px-1 inline-flex items-center gap-2 border-b-[3px] border-transparent text-sm whitespace-nowrap text-gray-500 active"
+                    class="hs-tab-active:font-semibold font-medium hs-tab-active:border-blue-500 hs-tab-active:text-blue-500 py-4 px-1 inline-flex items-center gap-2 border-b-[3px] border-transparent text-sm whitespace-nowrap text-gray-500 active"
                     id="tab-sales-item-1" data-hs-tab="#tabs-sales" aria-controls="tabs-sales" role="tab">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                         class="w-[18px] h-[18px]">
@@ -106,7 +111,7 @@
                     Orders <span class="text-gray-400">({{ $salesByUser->count() }})</span>
                 </button>
                 <button type="button"
-                    class="hs-tab-active:font-semibold font-medium hs-tab-active:border-blue-green hs-tab-active:text-blue-green py-4 px-1 inline-flex items-center gap-2 border-b-[3px] border-transparent text-sm whitespace-nowrap text-gray-500"
+                    class="hs-tab-active:font-semibold font-medium hs-tab-active:border-blue-500 hs-tab-active:text-blue-500 py-4 px-1 inline-flex items-center gap-2 border-b-[3px] border-transparent text-sm whitespace-nowrap text-gray-500"
                     id="tabs-reviews-item-2" data-hs-tab="#tabs-reviews" aria-controls="tabs-reviews" role="tab">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                         class="w-[18px] h-[18px]">
@@ -140,7 +145,7 @@
                                     @foreach ($salesByUser as $sales)
                                         <tr>
                                             <td>
-                                                <a wire:navigate class="text-blue-green font-semibold hover:underline"
+                                                <a wire:navigate class="text-blue-500 font-semibold hover:underline"
                                                     href="{{ route('detail.order', strtolower($sales->invoice)) }}">#{{ $sales->invoice }}</a>
                                             </td>
                                             <td class="text-center">{{ $sales->quantity }}</td>
@@ -187,7 +192,7 @@
                                             <td class="max-w-[100px]">
                                                 <a wire:navigate
                                                     href="{{ route('detail.product', $review->product->slug) }}"
-                                                    class="text-blue-green font-semibold hover:underline line-clamp-1"
+                                                    class="text-blue-500 font-semibold hover:underline line-clamp-1"
                                                     href="">
                                                     {{ $review->product->judul }}
                                                 </a>

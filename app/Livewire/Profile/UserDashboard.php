@@ -71,4 +71,17 @@ class UserDashboard extends Component
 
 		session()->flash('message', 'Profile berhasil diupdate!');
 	}
+
+	public function hapusGambar()
+	{
+		Storage::disk('public')->delete('img/profile/' . Auth::user()->image);
+
+		DB::table('users')->where('id', Auth::user()->id)->update([
+			'image' => ''
+		]);
+
+		Auth::user()->refresh();
+		$this->dispatch('profileUpdated');
+		session()->flash('message', 'Gambar dihapus!');
+	}
 }
