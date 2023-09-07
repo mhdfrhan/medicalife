@@ -394,32 +394,5 @@
     {{-- end article --}}
 
 
-    {{-- doctor --}}
-
-    <section class="pt-14 lg:py-14 px-5">
-        <div class="max-w-6xl mx-auto">
-            <div class="max-w-3xl mx-auto text-center mb-12">
-                <h1 class="heading">Dokter</h1>
-                <p class="mt-6 text-sm  text-gray-500 leading-relaxed">
-                    Ini adalah beberapa dokter yang sangat profesional dan terampil dibidangnya.
-                </p>
-            </div>
-            <div class="swiper dokter">
-                <div class="swiper-wrapper">
-                    @for ($i = 0; $i < 6; $i++)
-                        <div class="swiper-slide">
-													
-												</div>
-                    @endfor
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-        </div>
-    </section>
-
-    {{-- end doctor --}}
-
-
 
 </x-main-layout>
