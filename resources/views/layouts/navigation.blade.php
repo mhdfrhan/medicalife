@@ -249,8 +249,8 @@
             </ul>
         </div>
         <div class="text-gray-300 pb-10 mb-4">
-            <div class="p-5 bg-blue-500 rounded-2xl">
-                <h6 class="text-white font-bold text-xl">Dibuat dan dikembangkan oleh Medicalife</h6>
+            <div class="p-4 2xl:p-5 bg-blue-500 rounded-2xl">
+                <h6 class="text-white font-bold text-lg 2xltext-xl">Dibuat dan dikembangkan oleh Medicalife</h6>
             </div>
             <div
                 class="hs-dropdown relative w-full [--placement:right-top] [--trigger:hover] border-t border-gray-700 mt-5">

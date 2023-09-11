@@ -83,9 +83,8 @@ class Add extends Component
 
 	public function updatedImages()
 	{
-		
-			$this->displayedImages++;
-		
+
+		$this->displayedImages++;
 	}
 
 	public function deleteImage($index)
@@ -127,7 +126,6 @@ class Add extends Component
 			'created_at' => now(),
 		]);
 
-
 		foreach ($this->images as $image) {
 			$imageName = 'IMG-' . Str::random(40) . '.' . $image->getClientOriginalExtension();
 			$imagePath = $image->storeAs('img/products/', $imageName, 'public');
@@ -139,7 +137,7 @@ class Add extends Component
 			]);
 		}
 
-		Session::flash('message', 'Berhasil mempublish produk!');
+		Session::flash('message', 'Berhasil menambahkan produk!');
 		return $this->redirect(route('dashboard.products'), navigate: true);
 	}
 

@@ -10,8 +10,8 @@
 						dalam dunia kesehatan dan kesejahteraan.</p>
 				</div>
 			</div>
-			<div class="w-full lg:w-1/2 px-4">
-				<div class="max-w-lg xl:max-w-xl mx-auto xl:mr-0">
+			<div class="w-full lg:w-1/2 px-4 mt-4 lg:mt-0">
+				<div class="max-w-lg ml-auto xl:max-w-xl xl:mr-0">
 					<div class="mb-6 pb-6 border-b border-gray-700">
 						<div class="-mb-4 text-right">
 							<a class="inline-flex mb-4 mr-10 items-center text-white hover:text-blue-500 font-medium" href="#">
@@ -32,7 +32,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="text-right -mb-2 text-sm text-gray-400">
+					<div class="text-center md:text-right -mb-2 text-sm text-gray-400">
 						© Copyright {{ date('Y') === '2023' ? '2023' : '2023 - ' . date('Y') }} Medicalife. All Rights Reserved.
 					</div>
 				</div>

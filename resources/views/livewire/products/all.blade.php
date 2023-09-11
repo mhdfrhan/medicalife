@@ -170,11 +170,12 @@
                         </table>
                     </div>
                 </div>
-                @if ($products->count() >= 20)
+                @if ($products->hasPages())
                     <div class="mt-10">
                         {{ $products->links() }}
                     </div>
                 @endif
+
             @endempty
         </div>
     </div>

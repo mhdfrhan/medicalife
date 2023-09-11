@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,15 @@ Route::get('/product/{slug}', 'HomeController@detailProduct')->name('detail.prod
 Route::get('/products', 'HomeController@allProducts')->name('all.products');
 Route::get('/articles', 'ArticleController@index')->name('articles');
 Route::get('/article/{slug}', 'ArticleController@show')->name('article.show');
+
+Route::get('/clear-cache', function () {
+	$exitCodeView = Artisan::call('view:clear');
+	$exitCodeRoute = Artisan::call('route:clear');
+	$exitCodeConfig = Artisan::call('config:clear');
+	$exitCodeCache = Artisan::call('cache:clear');
+
+	return redirect()->back();
+});
 
 
 Route::middleware('auth')->group(function () {

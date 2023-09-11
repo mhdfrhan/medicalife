@@ -1,8 +1,6 @@
 <x-main-layout>
     <x-slot name="title">Home</x-slot>
 
-
-
     <!-- banner -->
 
     <section class="pt-5 px-5">

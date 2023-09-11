@@ -36,10 +36,10 @@ class Login extends Component
 			return null;
 		}
 
-		if (Auth::user()->role === 1) {
-			return redirect(route('dashboard'));
-		} else {
+		if (Auth::user()->role !== 1) {
 			return $this->redirect('/', navigate: true);
+		} else {
+			return redirect(route('dashboard'));
 		}
 	}
 

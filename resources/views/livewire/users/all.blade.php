@@ -89,7 +89,8 @@
                                                     <div class="hs-dropdown-open:ease-in hs-dropdown-open:opacity-100 hs-dropdown-open:scale-100 transition ease-out opacity-0 scale-95 duration-200 origin-top-right min-w-[1rem] bg-white shadow-lg shadow-gray-200 rounded-lg p-2"
                                                         aria-labelledby="dropdown-1" data-hs-transition>
                                                         <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100"
-                                                            href="{{ route('detail.user', encrypt($user->id)) }}" wire:navigate>
+                                                            href="{{ route('detail.user', encrypt($user->id)) }}"
+                                                            wire:navigate>
                                                             View
                                                         </a>
                                                         <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 mb-3 pb-3 border-b"
@@ -164,11 +165,13 @@
                         </table>
                     </div>
                 </div>
-                @if ($users->count() >= 20)
+
+                @if ($users->hasPages())
                     <div class="mt-10">
                         {{ $users->links() }}
                     </div>
                 @endif
+
             @endempty
         </div>
     </div>
