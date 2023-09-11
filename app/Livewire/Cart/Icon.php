@@ -18,11 +18,10 @@ class Icon extends Component
 		if (Auth::check()) {
 			$cartCount = Cart::where('user_id', Auth::user()->id)->get()->count();
 
-			if ($cartCount) {
-				$this->cartCount = $cartCount;
-			}
+			$this->cartCount = $cartCount; // Perbarui cartCount sesuai dengan jumlah item yang tersisa di keranjang
 		}
 	}
+
 
 	public function render()
 	{

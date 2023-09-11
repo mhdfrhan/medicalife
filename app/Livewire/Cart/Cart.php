@@ -56,6 +56,7 @@ class Cart extends Component
 		if ($cart->quantity <= 1) {
 			$cart->delete();
 			session()->flash('message', 'Item dihapus dari cart!');
+			$this->dispatch('cart-added');
 		} else {
 			$cart->update([
 				'quantity' => $cart->quantity - 1,

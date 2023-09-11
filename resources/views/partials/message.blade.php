@@ -1,6 +1,6 @@
 @if (session()->has('message'))
     <div id="alert"
-        class="hs-removing:translate-x-5 hs-removing:opacity-0 transition duration-300 bg-blue-500 border border-blue-200 rounded-lg p-4 fixed top-5 right-5 z-[999] max-w-lg"
+        class="hs-removing:translate-x-5 hs-removing:opacity-0 transition duration-300 bg-blue-500 border border-blue-500 rounded-lg p-4 fixed top-5 right-5 z-[999] max-w-lg"
         role="alert">
         <div class="flex items-center gap-x-4">
             <div class="flex-shrink-0">
@@ -29,7 +29,7 @@
 @endif
 @if (session()->has('error'))
     <div id="alert"
-        class="hs-removing:translate-x-5 hs-removing:opacity-0 transition duration-300 bg-rose-500 border border-rose-200 rounded-lg p-4 fixed top-5 right-5 z-[100] max-w-lg"
+        class="hs-removing:translate-x-5 hs-removing:opacity-0 transition duration-300 bg-rose-500 border border-rose-500 rounded-lg p-4 fixed top-5 right-5 z-[100] max-w-lg"
         role="alert">
         <div class="flex items-center gap-x-4">
             <div class="flex-shrink-0">

@@ -110,7 +110,7 @@
                 </div>
                 <div class="mt-14 sm:flex items-center justify-end gap-x-4">
                     <button wire:click='addToCart({{ $detail->id }})'
-                        class="flex w-full sm:w-auto mb-3 sm:mb-0 items-center gap-x-3 border py-3 px-6 border-blue-500  text-blue-500 rounded-lg hover:bg-blue-500/10 duration-300">
+                        class="flex w-full justify-center sm:w-auto mb-3 sm:mb-0 items-center gap-x-3 border py-3 px-6 border-blue-500  text-blue-500 rounded-lg hover:bg-blue-500/10 duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"

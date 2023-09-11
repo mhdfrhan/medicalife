@@ -25,10 +25,6 @@ class Send extends Component
 	public function send()
 	{
 
-		if (!Auth::check()) {
-			return $this->redirect(route('login'), navigate:true);
-		}
-
 		$this->validate();
 
 		$message = DB::table('messages');
