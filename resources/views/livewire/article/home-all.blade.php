@@ -1,12 +1,12 @@
 <div>
     <div class="mb-4 flex items-center justify-end gap-3">
         <div>
-            <input type="radio" id="terbaru" name="sort" wire:model='sort' class="peer hidden" value="terbaru">
+            <input type="radio" id="terbaru" name="sort" wire:model.live='sort' class="peer hidden" value="terbaru">
             <label for="terbaru"
                 class="bg-gray-200 py-2 px-4 rounded-lg font-medium cursor-pointer peer-checked:bg-blue-500 peer-checked:text-white hover:bg-gray-300 duration-300">Terbaru</label>
         </div>
         <div>
-            <input type="radio" id="terlama" name="sort" wire:model='sort' class="peer hidden" value="terlama">
+            <input type="radio" id="terlama" name="sort" wire:model.live='sort' class="peer hidden" value="terlama">
             <label for="terlama"
                 class="bg-gray-200 py-2 px-4 rounded-lg font-medium cursor-pointer peer-checked:bg-blue-500 peer-checked:text-white hover:bg-gray-300 duration-300">Terlama</label>
         </div>

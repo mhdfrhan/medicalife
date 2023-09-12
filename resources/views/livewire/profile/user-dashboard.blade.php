@@ -7,7 +7,7 @@
             <div class="p-5 bg-white rounded-2xl">
                 @if (!Auth::user()->alamat && !Auth::user()->no_telepon)
                     <div
-                        class="w-full py-2.5 text-center bg-red-500 rounded-xl text-white font-semibold mb-5 shadow-lg shadow-red-500/30">
+                        class="w-full py-2.5 text-center bg-red-500 rounded-xl text-white font-semibold mb-5 shadow-lg shadow-red-500/30 px-4">
                         Silahkan lengkapi akun Anda terlebih dahulu.
                     </div>
                 @endif

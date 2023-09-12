@@ -4,7 +4,7 @@
     <!-- banner -->
 
     <section class="pt-5 px-5">
-        <div class="max-w-6xl mx-auto bg-blue-500/30 rounded-[2rem] pt-10 px-4">
+        <div class="max-w-6xl mx-auto bg-blue-500/30 rounded-2xl md:rounded-[2rem] pt-10 px-4">
             <div class="flex flex-wrap items-center -mx-5">
                 <div class="w-full md:w-1/2 p-5">
                     <div class="md:max-w-lg lg:ml-20">

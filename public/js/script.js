@@ -8,14 +8,13 @@ $(document).ready(function () {
 		$zoomImage.attr("src", imageSrc);
 	}
 
-	$galleryImages.mouseenter(function () {
+	$galleryImages.on('click', function () {
 		var newImageSrc = $(this).attr("src");
 		updateZoomImage(newImageSrc);
 
 		$galleryImages.removeClass("active");
 		$(this).addClass("active");
 
-		// Mengganti pengaturan zoom langsung berdasarkan lebar jendela saat ini
 		if ($(window).width() > 1024) {
 			$("#zoom").extm({
 				position: 'right',
